@@ -24,4 +24,30 @@ Feature: Homepage
   Scenario: viewing the home page
     When I go to the homepage
     Then I should see the image "/images/rails.png"
+
+  Scenario: viewing the about us page
+    When I go to the about us page
+    Then I should see the image "/images/rails.png"  
+    And I should see "A learning disability is the most common disability in Britain"
+
+  Scenario: viewing the what we do page
+    When I go to the what we do page
+    Then I should see the image "/images/rails.png"  
+
+  Scenario: viewing stories page
+    When I go to the stories page
+    Then I should see the image "/images/rails.png"
+      
+  Scenario: viewing how you can help page
+    When I go to the how you can help
+    Then I should see the image "/images/rails.png"
+
+  Scenario: viewing the how to apply page
+    When I go to the how to apply page
+    Then I should see the image "/images/rails.png"
+
+  Scenario: viewing the contact us page
+    When I go to the contact us
+    Then I should see the image "/images/rails.png"
+      
       
