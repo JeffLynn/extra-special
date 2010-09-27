@@ -28,22 +28,22 @@ describe Story do
 
     it "insists on a name" do
       @story.name = ""
-      @story.valid?.should be_false
+      @story.should_not be_valid
     end
 
     it "insists on a title" do
       @story.title = ""
-      @story.valid?.should be_false
+      @story.should_not be_valid
     end
 
     it "insists on a body" do
       @story.body = ""
-      @story.valid?.should be_false
+      @story.should_not be_valid
     end
 
     it "insists on a picture" do
       @story.picture = nil
-      @story.valid?.should be_false
+      @story.should_not be_valid
     end
   end
 end
