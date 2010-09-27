@@ -12,8 +12,19 @@
 </head>
 <body>
 
-  <%= render :partial => '/layouts/main_menu', :locals => {:nav_id => 'left_menu'} %>
-  <%= yield %>
+  <div id="left_menu">
+    <%= render :partial => '/layouts/main_menu', :locals => {:nav_class => 'nav_bar'} %>  
+  </div>
+    
+  <div id="section_body">
+    <%= yield %>
+  </div>  
+
+  <div id="footer">
+    <%= render :partial => '/layouts/main_menu', :locals => {:nav_class => 'nav_bar'} %>
+  </div>
+  
+  
   
 </body>
 </html>

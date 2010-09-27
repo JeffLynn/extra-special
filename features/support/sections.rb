@@ -3,7 +3,9 @@ module SectionHelpers
     case section_name
 
     when 'the main navigation'
-      "#{prefix}*[contains(@class, 'main_nav')]"      
+      "#{prefix}*[contains(@id, 'left_menu')]"      
+    when 'the footer'
+      "#{prefix}*[contains(@id, 'footer')]"      
     else
       raise "Can't find mapping from \"#{section_name}\" to a section."
     end

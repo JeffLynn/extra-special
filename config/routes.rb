@@ -6,6 +6,12 @@ ActionController::Routing::Routes.draw do |map|
 
   map.with_options :controller => 'home' do |home|
     home.root             # index    
+    home.contact_us       'contact_us',          :action => 'contact_us'
+    home.about_us         'about_us', :action => 'about_us'
+    home.what_we_do       'what_we_do', :action => 'what_we_do'
+    home.stories          'stories', :action => 'stories'
+    home.how_you_can_help 'how_you_can_help', :action => 'how_you_can_help'
+    home.how_to_apply     'how_to_apply', :action => 'how_to_apply'
   end
   
   # The priority is based upon order of creation: first created -> highest priority.
