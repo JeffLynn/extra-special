@@ -1,3 +1,17 @@
+# == Schema Information
+#
+# Table name: users
+#
+#  id              :integer(4)      not null, primary key
+#  name            :string(50)      not null
+#  account         :string(20)      not null
+#  email           :string(100)     not null
+#  hashed_password :string(50)      not null
+#  salt            :string(50)      not null
+#  created_at      :datetime
+#  updated_at      :datetime
+#
+
 
 require 'digest/sha1'
 
