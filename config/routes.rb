@@ -5,7 +5,7 @@ ActionController::Routing::Routes.draw do |map|
   end
 
   map.with_options :controller => 'home' do |home|
-    home.root             # index
+    home.root             # index    
   end
   
   # The priority is based upon order of creation: first created -> highest priority.
