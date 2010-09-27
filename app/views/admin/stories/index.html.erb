@@ -1,0 +1,18 @@
+<h1>Stories</h1>
+<%= link_to("Add New Story", new_admin_story_path) %>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Title</th>
+    <th>Picture</th>
+    <th></th>
+  </tr>
+<% @stories.each do |story| %>
+  <tr>
+    <td><%= link_to(h(story.name), edit_admin_story_path(story))  %></td>
+    <td><%= h(story.title) %></td>
+    <td><%= image_tag(story.picture.url(:thumbnail)) %></td>
+    <td><%= link_to('delete', admin_story_path(story), :method => :delete, :confirm => "Are you sure you want to delete '#{h(story.name)}'?")%></td>
+  </tr>
+<% end %>
+</table>

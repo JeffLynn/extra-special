@@ -54,3 +54,6 @@ Rails::Initializer.run do |config|
   # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}')]
   # config.i18n.default_locale = :de
 end
+
+WEB_SERVER_AUTHENTICATES = false unless defined?(WEB_SERVER_AUTHENTICATES)
+AUTHENTICATION_REALM = "Extra Special Trust"
