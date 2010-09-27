@@ -15,10 +15,14 @@
 #
 
 class Story < ActiveRecord::Base
-  has_attached_file :picture
+  has_attached_file :picture,
+    :styles => {:banner => '519x233#',
+               :thumbnail => '111x50#'
+    }
 
   validates_presence_of :name
   validates_presence_of :title
   validates_presence_of :body
+  # 519X233
   validates_attachment_presence :picture
 end
