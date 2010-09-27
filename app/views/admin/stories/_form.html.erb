@@ -1,0 +1,12 @@
+<h1><%= @story.id.nil? ? 'New' : 'Edit'%> Story</h1>
+<%- form_for [:admin, @story], :html => { :multipart => true } do |f| -%>
+  <%= error_messages_for :story %>
+  <p><%= f.label(:name) %><%= f.text_field(:name) %></p>
+  <p><%= f.label(:title) %><%= f.text_field(:title) %></p>
+  <p><%= f.label(:body) %><%= f.text_area(:body) %></p>
+  <% unless @story.picture.nil? %>
+  <p><%= image_tag(@story.picture.url) %></p>
+  <% end %>
+  <p><%= f.label(:picture) %><%= f.file_field(:picture) %></p>
+  <%= f.submit @story.id.nil? ? 'Create' : 'Update' %>
+<%- end -%>

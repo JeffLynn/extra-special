@@ -9,4 +9,8 @@ namespace :extra_special_trust do
     end
   end
 
+  desc "add default user"
+  task :create_admin => :environment do
+    User.create!(:name => 'admin', :account => 'admin', :email => 'admin@unboxedconsulting.com', :password => 'l3tmein', :password_confirmation => 'l3tmein')
+  end
 end

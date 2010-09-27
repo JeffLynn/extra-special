@@ -1,5 +1,9 @@
 ActionController::Routing::Routes.draw do |map|
-  
+
+  map.namespace :admin do |admin|
+    admin.resources :stories
+  end
+
   map.with_options :controller => 'home' do |home|
     home.root             # index
   end

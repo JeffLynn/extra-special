@@ -53,3 +53,15 @@ Spec::Runner.configure do |config|
   #
   # For more information take a look at Spec::Runner::Configuration and Spec::Runner
 end
+
+def test_file(file, type = 'image/png')
+  # assume file is in test_files unless the filename is absolute
+  unless file.include?(RAILS_ROOT)
+    file = File.join(File.dirname(__FILE__), 'fixtures', file)
+  end
+  upload = File.new(file)
+  upload.extend(ActionController::UploadedFile)
+  upload.original_path = file
+  upload.content_type = type
+  upload
+end
