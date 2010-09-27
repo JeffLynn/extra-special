@@ -15,9 +15,11 @@ Rails::Initializer.run do |config|
     config.gem 'rspec-rails',      :lib => false, :version => '>=1.3.2'
     config.gem 'factory_girl',     :lib => false, :version => ">= 1.2.3"
     config.gem 'be_valid_asset',   :lib => false
+    config.gem 'gherkin',          :lib => false, :version => '= 2.2.4'
     config.gem 'cucumber'
     config.gem 'cucumber-rails',   :lib => false, :version => '>=0.3.0'
     config.gem 'capybara',         :lib => false, :version => '= 0.3.9'
+    config.gem "paperclip"
   end
   
   # Settings in config/environments/* take precedence over those specified here.
