@@ -5,4 +5,5 @@ table {width: 100%; border-collapse: collapse; border: 1px solid gray;}
 td, th {padding: 10px 5px; border: 1px solid lightgrey;}
 a {color: gray; text-decoration: none;}
 a:hover {text-decoration: underline;}
-h1 {margin: 7px 0;}
+h1 {margin: 10px 0 5px;}
+.functions {margin: 7px 0;}
