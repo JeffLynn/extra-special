@@ -3,20 +3,25 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />  
+  <%= stylesheet_link_tag 'layout' %>
   <!--[if lt IE 7]>
     <%= stylesheet_link_tag 'ie6' %>
   <![endif]-->
   <!--[if gt IE 6]>
     <%= stylesheet_link_tag 'ie7' %>
   <![endif]-->
+  
 </head>
 <body>
+  
+  <div id="header">    
+  </div>
 
   <div id="left_menu">
     <%= render :partial => '/layouts/main_menu', :locals => {:nav_class => 'nav_bar'} %>  
   </div>
     
-  <div id="section_body">
+  <div id="body_section">
     <%= yield %>
   </div>  
 

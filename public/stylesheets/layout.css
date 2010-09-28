@@ -1,0 +1,81 @@
+/**** reset css ****/
+html, body, h1, h2, h3, h4, h5, h6, p, ol, ul, li, pre, code, address, variable, form, fieldset, blockquote
+{
+ padding: 0;
+ margin: 0;
+ font-size: 100%;
+ font-weight: normal;
+}
+table { border-collapse: collapse; border-spacing: 0; }
+td, th, caption { font-weight: normal; text-align: left; }
+img, fieldset { border: 0; }
+ol { padding-left: 1.4em; list-style: decimal; }
+ul { padding-left: 1.4em; list-style:square; }
+q:before, q:after { content:''; }
+/**** end reset ****/
+
+#header
+{
+  background-image: url(../images/header.png);
+  background-position: top left;
+  background-repeat: no-repeat;
+  width: 943px;
+  height: 135px;
+  margin-left: 80px;
+}
+
+#footer{border-top:1px solid #ddd;margin-left:287px;}
+
+#footer li
+{
+  display: inline;
+  margin-left:10px;
+}
+
+#left_menu
+{
+  float:left;
+  margin-left: 80px;
+  height: 200px; 
+  width: 207px;
+}
+
+#body_section
+{
+  margin-left: 287px;
+  border-left: 1px solid #ddd; 
+  padding:15px;
+}
+
+#left_menu li
+{
+  display: block;
+  list-style: none;
+  padding-top: 10px;
+  padding-left: 25px;  
+}
+
+.nav_bar a
+{
+  text-decoration:none;
+  color: #888;
+}
+
+p.main_content
+{
+  color: #888;
+  font-size: 0.9em;
+  width: 676px;
+  line-height: 1.6em;
+  
+}
+
+p.section_title
+{
+  color: #888;
+  font-size: 1.4em;
+  width: 676px;
+  padding: 20px 0 10px 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ddd;  
+}
