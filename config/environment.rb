@@ -16,6 +16,7 @@ Rails::Initializer.run do |config|
     config.gem 'factory_girl',     :lib => false, :version => ">= 1.2.3"
     config.gem 'be_valid_asset',   :lib => false
     config.gem 'gherkin',          :lib => false, :version => '= 2.2.4'
+    config.gem 'mime-types',       :lib => false, :version => '= 1.16'
     config.gem 'cucumber'
     config.gem 'cucumber-rails',   :lib => false, :version => '>=0.3.0'
     config.gem 'capybara',         :lib => false, :version => '= 0.3.9'
