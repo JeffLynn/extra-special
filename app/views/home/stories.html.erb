@@ -1,2 +1,16 @@
-<img alt="Home" src="/images/rails.png" />
-stories
+<ol id="story_list">
+  <% @stories.each do |story| %>
+    <li <%= @story && story.id == @story.id ? "class=\"active\"" : "" %> >
+      <%= link_to(h(story.name), story_path(story.id)) %>
+    </li>
+  <% end %>
+</ol>
+<div id="story">
+  <div id="image">
+    <%= image_tag(@story.picture.url(:banner)) if @story %>
+  </div>
+  <div id="text">
+    <h1><%= h(@story.title) if @story %></h1>
+    <%= @story.body if @story %>
+  </div>
+</div>

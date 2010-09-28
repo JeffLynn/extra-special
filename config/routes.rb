@@ -11,6 +11,7 @@ ActionController::Routing::Routes.draw do |map|
     home.about_us         'about_us', :action => 'about_us'
     home.what_we_do       'what_we_do', :action => 'what_we_do'
     home.stories          'stories', :action => 'stories'
+    home.story            'stories/:story_id', :action => 'stories'
     home.how_you_can_help 'how_you_can_help', :action => 'how_you_can_help'
     home.how_to_apply     'how_to_apply', :action => 'how_to_apply'
   end
