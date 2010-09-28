@@ -1,0 +1,82 @@
+<img alt="Home" src="/images/how_to_apply.png" />
+<h1>How to apply</h1>
+<% form_for(@application) do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label(:name_of_applicant,"Name of Applicant #{mandatory_indicator()}") %>
+    <%= f.text_field(:name_of_applicant, :class => 'text') %>
+  </p>
+  <p>
+    <%= f.label(:address_of_applicant,"Address of Applicant #{mandatory_indicator()}") %>
+    <%= f.text_area(:address_of_applicant) %>
+  </p>
+  <p>
+    <%= f.label(:name_of_applicants_supporter,"Name(s) of Applicant's Supporter(s) #{mandatory_indicator()}") %>
+    <%= f.text_field(:name_of_applicants_supporter, :class => 'text') %>
+  </p>
+  <p>
+    <%= f.label(:contact_details_of_supporter,"Contact Details of Supporter(s)<br />(including telephone &amp;/or email) #{mandatory_indicator()}") %>
+    <%= f.text_area(:contact_details_of_supporter) %>
+  </p>
+  <p>
+    <%= f.label(:what_applicant_is_applying_for,"What Applicant is Applying For #{mandatory_indicator()}") %>
+    <%= f.text_area(:what_applicant_is_applying_for) %>
+  </p>
+  <p>
+    <%= f.label(:relevant_information,"Any Relevant Information About Applicant and Application #{mandatory_indicator()}") %>
+    <%= f.text_area(:relevant_information) %>
+  </p>
+  <p>
+    <%= f.label(:details_of_cost,"Details of Cost<br />(Attach quotations or estimates) #{mandatory_indicator()}") %>
+    <%= f.text_area(:details_of_cost) %>
+  </p>
+  <p>
+    <%= f.label(:other_contributions,"Amount Which Other May Have Agreed to Contribute #{mandatory_indicator()}") %>
+    <%= f.text_field(:other_contributions, :class => 'text') %>
+  </p>
+  <p>
+    <%= f.label(:amount_requested_from_extra_special_trust,"Amount Requested from The ExtraSpecial Trust #{mandatory_indicator()}") %>
+    <%= f.text_field(:amount_requested_from_extra_special_trust, :class => 'text') %>
+  </p>
+  <div class="p_like">
+    <span class="label">If you are in receipt of any of the following funding please tick the appropriate box <%= mandatory_indicator() %></span>
+    <div class="checkboxes">
+      <div><%= f.check_box(:registered_care_allowance) %> Registered care allowance</div>
+      <div><%= f.check_box(:supported_living_allowance) %> Supported living allowance</div>
+      <div><%= f.check_box(:domiciliary_allowance) %> Domiciliary allowance</div>
+      <div><%= f.check_box(:no_additional_funding) %> None</div>
+    </div>
+  </div>
+  <div class="p_like">
+    <span class="label">&nbsp;</span>
+    <div class="checkboxes">
+      <div><%= f.check_box(:accept_terms_and_conditions) %> Click here to say you accept out Terms & Conditions</div>
+    </div>
+  </div>
+  <div class="p_like">
+    <span class="label">&nbsp;</span>
+    <div>
+      <%= f.submit("submit", :class => 'submit') %>
+    </div>
+  </div>
+<% end %>
+  <div id="notes">
+    <p>
+      The supporter in this application can be a carer, support worker, social worker or care organisation; if the supporter
+      is not a professional in the field of learning disabilities, confirmation from a professional person, such as a social worker
+      or a doctor, that the applicant has a recognised learning disability, will be required.
+    </p>
+    <p>
+      If in any doubt about ExtraSpecial grants, please contact the Hon Secretary at:
+    </p>
+    <p class="address">
+      The ExtraSpecial Trust<br />
+      29 Grange Court Road<br />
+      Henleaze<br />
+      Bristol BS9 4DR<br />
+      Tel: 0117 9621761
+    </p>
+    <p>
+      ALL APPLICANTS INFORMATION WILL BE KEPT IN STRICT CONFIDENCE WITHIN THE EXTRASPECIAL TRUST
+    </p>
+  </div>

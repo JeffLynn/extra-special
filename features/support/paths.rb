@@ -17,7 +17,7 @@ module NavigationHelpers
     when /stories/
       '/stories'      
     when /how to apply/
-      '/how_to_apply'      
+      '/applications/new'
     when /how you can help/
       '/how_you_can_help'            
     when /contact us/

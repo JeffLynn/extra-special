@@ -49,6 +49,7 @@ q:before, q:after { content:''; }
   padding: 20px;
   min-height:515px;
   border-bottom: 1 px solid #ddd;
+  width: 700px;
 }
 
 #left_menu li
@@ -124,10 +125,74 @@ div#story {
     font-family: Georgia, Times, serif;
 }
 
-div#story h1 {
+h1 {
     padding: 25px 10px 12px;
     font-size: 16pt;
     border-bottom: 1px solid #ddd;
     margin-bottom: 15px;
     font-style: italic;
+    font-family: Georgia, Times, serif;
+}
+
+form {
+    font-family: Georgia, Times, serif;
+    color: #888;
+}
+
+form p,
+div.p_like {
+    padding: 15px 0;
+}
+
+form label,
+form .label {
+    display: inline-block;
+    width: 358px;
+    float: left;
+}
+
+form div.checkboxes {
+    margin-left: 358px;
+}
+
+textarea,
+input.text {
+    width: 338px;
+    border: 1px solid #888;
+}
+
+textarea {
+    height: 125px;
+}
+
+input.text {
+    height: 28px;
+}
+
+input.submit {
+    width: 100px;
+    height: 34px;
+    background-color: #ef3c37;
+    color: white;
+    font-family: Georgia, Times, serif;
+    font-weight: bold;
+    font-size: 12pt;
+}
+
+span.mandatory {
+    color: #ef3c37;
+}
+
+div#notes {
+    padding: 25px 10px 12px;
+    border-top: 1px solid #ddd;
+    margin-top: 85px;
+    font-style: italic;
+    font-family: Georgia, Times, serif;
+    color: #888;
+}
+
+div#notes p {
+    padding: 15px 0;
+    line-height: 200%;
 }

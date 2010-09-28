@@ -16,6 +16,8 @@ ActionController::Routing::Routes.draw do |map|
     home.how_you_can_help 'how_you_can_help', :action => 'how_you_can_help'
     home.how_to_apply     'how_to_apply', :action => 'how_to_apply'
   end
+
+  map.resources :applications, :controller => :apply, :only => [:new, :create]
   
   # The priority is based upon order of creation: first created -> highest priority.
 
