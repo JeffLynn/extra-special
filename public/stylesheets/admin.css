@@ -83,3 +83,7 @@ div.buttons {
 #admin_navigation {
     margin: 10px 5px 0;
 }
+
+#admin_navigation a {
+    margin-right: 20px;
+}
