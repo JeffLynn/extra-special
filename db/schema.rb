@@ -9,7 +9,25 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100927124104) do
+ActiveRecord::Schema.define(:version => 20100928113303) do
+
+  create_table "applications", :force => true do |t|
+    t.string   "name_of_applicant"
+    t.string   "address_of_applicant"
+    t.string   "name_of_applicants_supporter"
+    t.string   "contact_details_of_supporter"
+    t.text     "what_applicant_is_applying_for"
+    t.text     "relevant_information"
+    t.text     "details_of_cost"
+    t.string   "other_contributions",                       :limit => 100
+    t.string   "amount_requested_from_extra_special_trust", :limit => 100
+    t.boolean  "registered_care_allowance",                                :default => false, :null => false
+    t.boolean  "supported_living_allowance",                               :default => false, :null => false
+    t.boolean  "domiciliary_allowance",                                    :default => false, :null => false
+    t.datetime "accepted_terms_and_conditions"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "stories", :force => true do |t|
     t.string   "name"
