@@ -23,16 +23,16 @@ Feature: Homepage
       
   Scenario: viewing the home page
     When I go to the homepage
-    Then I should see the image "/images/rails.png"
+    Then I should see the image "/images/homepage.png"
 
   Scenario: viewing the about us page
     When I go to the about us page
-    Then I should see the image "/images/rails.png"  
+    Then I should see the image "/images/about_us.png"  
     And I should see "A learning disability is the most common disability in Britain"
 
   Scenario: viewing the what we do page
     When I go to the what we do page
-    Then I should see the image "/images/rails.png"  
+    Then I should see the image "/images/what_we_do.png"  
 
   Scenario: viewing stories page
     When I go to the stories page
