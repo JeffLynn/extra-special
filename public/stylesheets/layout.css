@@ -31,7 +31,7 @@ q:before, q:after { content:''; }
 #footer li
 {
   display: inline;
-  margin-left:10px;
+  margin-left:25px;
 }
 
 #left_menu
@@ -63,6 +63,7 @@ q:before, q:after { content:''; }
 {
   text-decoration:none;
   color: #888;
+  font-size: 0.9em;
 }
 
 div.two_columns_main_content
