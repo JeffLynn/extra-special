@@ -31,12 +31,12 @@ class Application < ActiveRecord::Base
   validates_presence_of :other_contributions
   validates_presence_of :amount_requested_from_extra_special_trust
   validates_presence_of :accepted_terms_and_conditions
-  validates_length_of :name_of_applicant, :maximum => 255
-  validates_length_of :address_of_applicant, :maximum => 255
-  validates_length_of :name_of_applicants_supporter, :maximum => 255
-  validates_length_of :contact_details_of_supporter, :maximum => 255
-  validates_length_of :other_contributions, :maximum => 100
-  validates_length_of :amount_requested_from_extra_special_trust, :maximum => 100
+  validates_length_of :name_of_applicant, :maximum => 255, :allow_nil => true
+  validates_length_of :address_of_applicant, :maximum => 255, :allow_nil => true
+  validates_length_of :name_of_applicants_supporter, :maximum => 255, :allow_nil => true
+  validates_length_of :contact_details_of_supporter, :maximum => 255, :allow_nil => true
+  validates_length_of :other_contributions, :maximum => 100, :allow_nil => true
+  validates_length_of :amount_requested_from_extra_special_trust, :maximum => 100, :allow_nil => true
 
   attr_accessor :no_additional_funding
 
@@ -54,6 +54,16 @@ class Application < ActiveRecord::Base
   def after_find
     # Set the no additional funding flag after the record is loaded.
     @no_additional_funding = !(registered_care_allowance || supported_living_allowance || domiciliary_allowance)
+  end
+
+  def accept_terms_and_conditions
+    !self.accepted_terms_and_conditions.nil?
+  end
+  
+  def accept_terms_and_conditions=(value)
+    if self.accepted_terms_and_conditions.nil?
+      self.accepted_terms_and_conditions = !!value ? Time.now : nil
+    end
   end
 end
 
