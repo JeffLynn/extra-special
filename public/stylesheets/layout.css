@@ -177,3 +177,21 @@ input.submit {
     font-weight: bold;
     font-size: 12pt;
 }
+
+span.mandatory {
+    color: #ef3c37;
+}
+
+div#notes {
+    padding: 25px 10px 12px;
+    border-top: 1px solid #ddd;
+    margin-top: 85px;
+    font-style: italic;
+    font-family: Georgia, Times, serif;
+    color: #888;
+}
+
+div#notes p {
+    padding: 15px 0;
+    line-height: 200%;
+}
