@@ -79,3 +79,40 @@ p.section_title
   margin-bottom: 10px;
   border-bottom: 1px solid #ddd;  
 }
+
+ol#story_list {
+    list-style-type: none;
+    width: 180px;
+    float: left;
+    padding: 5px;
+}
+
+ol#story_list a
+{
+  text-decoration:none;
+  color: #888;
+  font-size: 12pt;
+  font-family: Georgia, Times, serif;
+}
+
+ol#story_list li.active a
+{
+  color: red;
+}
+
+div#story {
+    margin: -15px 0 -15px 180px;
+    padding: 20px;
+    border-left: 1px solid #ddd;
+    width: 518px;
+    color: #888;
+    font-family: Georgia, Times, serif;
+}
+
+div#story h1 {
+    padding: 25px 10px 12px;
+    font-size: 16pt;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 15px;
+    font-style: italic;
+}
