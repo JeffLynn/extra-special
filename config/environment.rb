@@ -21,6 +21,7 @@ Rails::Initializer.run do |config|
     config.gem 'cucumber-rails',   :lib => false, :version => '>=0.3.0'
     config.gem 'capybara',         :lib => false, :version => '= 0.3.9'
     config.gem "paperclip"
+    config.gem "pickle"
   end
   
   # Settings in config/environments/* take precedence over those specified here.

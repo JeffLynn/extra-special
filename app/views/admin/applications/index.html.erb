@@ -1,0 +1,15 @@
+<h1>Applications</h1>
+<table>
+  <tr>
+    <th>Name of Applicant</th>
+    <th>Requested Amount</th>
+    <th></th>
+  </tr>
+  <% @applications.each do |app| %>
+    <tr>
+      <td><%= link_to(h(app.name_of_applicant), admin_application_path(app))  %></td>
+      <td><%= h(app.amount_requested_from_extra_special_trust) %></td>
+      <td><%= link_to('delete', admin_application_path(app), :method => :delete, :confirm => "Are you sure you want to delete the application submitted by '#{h(app.name_of_applicant)}'?")%></td>
+    </tr>
+  <% end %>
+</table>

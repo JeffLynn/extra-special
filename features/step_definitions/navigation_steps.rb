@@ -12,3 +12,8 @@ Then /^I should (not |)see a link to (.*?) in (.*)$/ do |see_or_not, link_target
     end
   end
 end
+
+When /^debugger$/ do
+  debugger
+  :a
+end

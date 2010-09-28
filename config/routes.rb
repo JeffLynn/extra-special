@@ -3,6 +3,7 @@ ActionController::Routing::Routes.draw do |map|
   map.namespace :admin do |admin|
     admin.resources :stories
     admin.default '', :controller => 'stories', :action => 'index'
+    admin.resources :applications, :only => [:index, :show]
   end
 
   map.with_options :controller => 'home' do |home|

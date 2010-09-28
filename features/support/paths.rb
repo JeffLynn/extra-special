@@ -21,8 +21,12 @@ module NavigationHelpers
     when /how you can help/
       '/how_you_can_help'            
     when /contact us/
-      '/contact_us'      
-      
+      '/contact_us'
+    when /cms homepage/
+      '/admin'
+    when /the applications page/
+      '/admin/applications'
+    
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
     #
