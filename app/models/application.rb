@@ -61,8 +61,8 @@ class Application < ActiveRecord::Base
   end
   
   def accept_terms_and_conditions=(value)
-    if self.accepted_terms_and_conditions.nil?
-      self.accepted_terms_and_conditions = !!value ? Time.now : nil
+    if self.accepted_terms_and_conditions.nil? && value && value.to_i == 1
+      self.accepted_terms_and_conditions = Time.now
     end
   end
 end
