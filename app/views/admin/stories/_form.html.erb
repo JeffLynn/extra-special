@@ -5,9 +5,11 @@
   <p><%= f.label(:title) %><%= f.text_field(:title) %></p>
   <p><%= f.label(:body) %><%= f.text_area(:body) %></p>
   <% unless @story.picture.nil? %>
-  <p><%= image_tag(@story.picture.url(:thumbnail)) %></p>
+    <p><%= image_tag(@story.picture.url(:thumbnail)) %></p>
   <% end %>
   <p><%= f.label(:picture) %><%= f.file_field(:picture) %></p>
-  <%= f.submit @story.id.nil? ? 'Create' : 'Update' %>
-  <%= link_to("Back", admin_stories_path()) %>
+  <div class="buttons">
+    <%= f.submit @story.id.nil? ? 'Create' : 'Update' %>
+    <%= link_to("Back", admin_stories_path()) %>
+  </div>
 <%- end -%>

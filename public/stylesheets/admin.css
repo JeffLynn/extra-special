@@ -1,9 +1,85 @@
-h1, h2, h3, h4, body, a, tr, thead, tbody, tfooter {padding: 0; margin: 0; font-family: Arial, Helvetica; color: gray;}
-body {width: 960px; margin: 0 auto;}
-table {width: 98%; border-collapse: collapse; border: 1px solid lightgrey;}
-td, th {padding: 10px 5px; border: 1px solid lightgrey;}
-a {color: gray; text-decoration: none;}
-a:hover {text-decoration: underline;}
-h1 {margin: 10px 0 5px;}
-.functions {margin: 7px 0;}
-label {width: 200px; display: inline-block;}
+body, h1, h2, h3, h4, h5, h6, p, ol, ul, form, blockquote {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica;
+    color: gray;
+}
+
+h1, h2, h3, h4, h5, h6, pre, code {
+    font-size: 1em;
+}
+
+a {
+    text-decoration: none;
+    color: gray;
+    font-family: Arial, Helvetica;
+}
+
+a img {
+    border: none;
+}
+
+body {
+    width: 960px;
+    margin: 0 auto;
+}
+
+table {
+    width: 95%;
+    border-collapse: collapse;
+    border: 1px solid lightgrey;
+}
+
+td, th {
+    padding: 10px 5px;
+    border: 1px solid lightgrey;
+}
+
+p {
+    margin-top: 8px;
+}
+
+form {
+    border: 1px solid lightgray;
+    padding: 5px 10px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+h1 {
+    font-size: 1.5em;
+    margin: 10px 0 5px;
+}
+
+.functions {
+    margin: 7px 0;
+}
+
+label {
+    width: 200px;
+    display: inline-block;
+}
+
+div.fieldWithErrors {
+    display: inline;
+    color: red;
+}
+
+#errorExplanation ul {
+    list-style-type: none;
+    font-weight: bold;
+}
+
+#errorExplanation ul li {
+    margin-left: 10px;
+}
+
+div.buttons {
+    margin: 10px 0 0;
+}
+
+#admin_navigation {
+    margin: 10px 5px 0;
+}
