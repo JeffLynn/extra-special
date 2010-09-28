@@ -15,7 +15,9 @@
 <body>
 
   <%= yield %>
+  
   <div id="admin_navigation">
+   <%= link_to('Home', root_path) %>
    <%= link_to('Stories', admin_stories_path) %>
   </div>
 
