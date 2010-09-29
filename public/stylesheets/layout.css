@@ -26,13 +26,16 @@ q:before, q:after { content:''; }
   margin-left: 80px;
 }
 
-#footer{border-top:1px solid #ddd;border-left:1px solid #ddd;margin-left:287px; padding-top:10px;}
+div#cross_box {border-top:1px solid #ddd; width:160px; height: 10px; margin-left: 127px; float:left;}
+#footer .nav_bar{margin-left:287px; padding-top:10px;border-top:1px solid #ddd;border-left:1px solid #ddd;}
 
 #footer li
 {
   display: inline;
   margin-left:25px;
 }
+
+
 
 #left_menu
 {
