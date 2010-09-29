@@ -1,5 +1,5 @@
 <img alt="Home" src="/images/how_to_apply.png" />
-<h1>How to apply</h1>
+<h1 class="section_title">How to apply</h1>
 <% form_for(@application) do |f| %>
   <%= f.error_messages %>
   <p>
@@ -23,7 +23,7 @@
     <%= f.text_area(:what_applicant_is_applying_for) %>
   </p>
   <p>
-    <%= f.label(:relevant_information,"Any Relevant Information About Applicant and Application #{mandatory_indicator()}") %>
+    <%= f.label(:relevant_information,"Any Relevant Information About<br/>Applicant and Application #{mandatory_indicator()}") %>
     <%= f.text_area(:relevant_information) %>
   </p>
   <p>
@@ -39,7 +39,7 @@
     <%= f.text_field(:amount_requested_from_extra_special_trust, :class => 'text') %>
   </p>
   <div class="p_like">
-    <span class="label">If you are in receipt of any of the following funding please tick the appropriate box <%= mandatory_indicator() %></span>
+    <span class="label">If you are in receipt of any of the following funding<br/> please tick the appropriate box <%= mandatory_indicator() %></span>
     <div class="checkboxes">
       <div><%= f.check_box(:registered_care_allowance) %> Registered care allowance</div>
       <div><%= f.check_box(:supported_living_allowance) %> Supported living allowance</div>

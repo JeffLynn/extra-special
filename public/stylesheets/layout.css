@@ -68,8 +68,7 @@ q:before, q:after { content:''; }
 }
 
 div.two_columns_main_content
-{
-  border-top: 1px solid #ddd;
+{  
   width: 676px;
   padding-top: 10px;
 }
@@ -85,7 +84,7 @@ p {font: helvetica;}
 p.left_column{ float: left; width: 326px;}
 p.right_column { margin-left: 346px;}
 
-p.section_title
+h1.section_title
 {
   color: #888;
   font-size: 1.4em;
@@ -94,6 +93,7 @@ p.section_title
   margin-bottom: 5px;
   font-style: italic;
   font-weight: normal;
+  border-bottom: 1px solid #ddd;
 }
 
 ol#story_list {
@@ -125,7 +125,7 @@ div#story {
     font-family: Georgia, Times, serif;
 }
 
-h1 {
+/*h1 {
     padding: 25px 10px 12px;
     font-size: 16pt;
     border-bottom: 1px solid #ddd;
@@ -133,43 +133,28 @@ h1 {
     font-style: italic;
     font-family: Georgia, Times, serif;
 }
-
+*/
 form {
     font-family: Georgia, Times, serif;
     color: #888;
 }
 
-form p,
-div.p_like {
-    padding: 15px 0;
-}
-
-form label,
-form .label {
+form p, div.p_like{padding: 15px 0;}
+form label, form .label
+{
     display: inline-block;
-    width: 358px;
+    width: 350px;
     float: left;
+    font-size: 0.8em;
 }
 
-form div.checkboxes {
-    margin-left: 358px;
-}
+form div.checkboxes{ margin-left: 350px; font-size:0.8em;}
+textarea, input.text{width: 338px; border: 1px solid #888;}
+textarea{height: 125px;}
+input.text{height: 23px; width:338;}
 
-textarea,
-input.text {
-    width: 338px;
-    border: 1px solid #888;
-}
-
-textarea {
-    height: 125px;
-}
-
-input.text {
-    height: 28px;
-}
-
-input.submit {
+input.submit
+{
     width: 100px;
     height: 34px;
     background-color: #ef3c37;
@@ -179,11 +164,10 @@ input.submit {
     font-size: 12pt;
 }
 
-span.mandatory {
-    color: #ef3c37;
-}
+span.mandatory{color: #ef3c37;}
 
-div#notes {
+div#notes
+{
     padding: 25px 10px 12px;
     border-top: 1px solid #ddd;
     margin-top: 85px;
@@ -192,7 +176,8 @@ div#notes {
     color: #888;
 }
 
-div#notes p {
+div#notes p
+{
     padding: 15px 0;
     line-height: 200%;
 }
