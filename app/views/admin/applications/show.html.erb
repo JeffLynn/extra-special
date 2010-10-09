@@ -1,0 +1,15 @@
+
+<h1 class="section_title"><%= @application.name_of_applicant %>'s Application</h1>
+
+<p><span>Address of applicant</span>: <span><%= @application.address_of_applicant%></span></p>
+<p><span>Name of applicant's supporter</span>: <span><%= @application.name_of_applicants_supporter%></span></p>
+<p><span>Contact details of supporter</span>: <span><%= @application.contact_details_of_supporter%></span></p>
+<p><span>What applicant is applying for</span>: <span><%= @application.what_applicant_is_applying_for%></span></p>
+<p><span>Relevant information</span>: <span><%= @application.relevant_information%></span></p>
+<p><span>Details of cost</span>: <span><%= @application.details_of_cost%></span></p>
+<p><span>Other contributions</span>: <span><%= @application.other_contributions%></span></p>
+<p><span>Amount requested from extra special trust</span>: <span><%= @application.amount_requested_from_extra_special_trust%></span></p>
+
+<div class="buttons">
+  <%= link_to("Back", admin_applications_path()) %>
+</div>

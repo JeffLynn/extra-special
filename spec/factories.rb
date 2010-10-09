@@ -43,3 +43,9 @@ Factory.define :application do |a|
   a.domiciliary_allowance                     false
   a.accepted_terms_and_conditions             {Time.now}
 end
+
+Factory.define :link do |l|
+  l.ref           "http://www.example.com"
+  l.text          "example.com"
+end
+

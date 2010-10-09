@@ -22,10 +22,19 @@ module NavigationHelpers
       '/how_you_can_help'            
     when /contact us/
       '/contact_us'
+    when /favourites/
+      '/favourites'      
     when /cms homepage/
       '/admin'
     when /the applications page/
       '/admin/applications'
+    when /cms favourites/
+      '/admin/links'
+    when /ultimate page/
+      '/admin/links'
+      
+    when /example page "([^\"]*)"/
+      "http://www.example#{$1}.com"
     
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:

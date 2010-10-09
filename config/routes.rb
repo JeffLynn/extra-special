@@ -3,7 +3,8 @@ ActionController::Routing::Routes.draw do |map|
   map.namespace :admin do |admin|
     admin.resources :stories
     admin.default '', :controller => 'stories', :action => 'index'
-    admin.resources :applications, :only => [:index, :show]
+    admin.resources :applications, :only => [:index, :show, :destroy]
+    admin.resources :links
   end
 
   map.with_options :controller => 'home' do |home|
@@ -15,6 +16,7 @@ ActionController::Routing::Routes.draw do |map|
     home.story            'stories/:story_id', :action => 'stories'
     home.how_you_can_help 'how_you_can_help', :action => 'how_you_can_help'
     home.how_to_apply     'how_to_apply', :action => 'how_to_apply'
+    home.favourites       'favourites', :action => 'favourites'
   end
 
   map.resources :applications, :controller => :apply, :only => [:new, :create]

@@ -1,0 +1,11 @@
+<h1><%= @link.id.nil? ? 'New' : 'Edit'%> Link</h1>
+<%- form_for [:admin, @link] do |f| -%>
+  <%= error_messages_for :link %>
+  <p><%= f.label(:ref) %><%= f.text_field(:ref) %></p>
+  <p><%= f.label(:text) %><%= f.text_field(:text) %></p>
+
+  <div class="buttons">
+    <%= f.submit @link.id.nil? ? 'Create' : 'Update' %>
+    <%= link_to("Back", admin_links_path()) %>
+  </div>
+<%- end -%>

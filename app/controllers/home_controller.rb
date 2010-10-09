@@ -28,5 +28,9 @@ class HomeController < ApplicationController
 
   def contact_us
   end
+
+  def favourites
+    @favourite_links = Link.find(:all)
+  end
   
 end

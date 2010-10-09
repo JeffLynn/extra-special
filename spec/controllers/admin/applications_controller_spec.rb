@@ -35,8 +35,33 @@ describe Admin::ApplicationsController do
         
         response.should have_tag('a', :text => @application.name_of_applicant)
         response.should have_tag('a', :text => "delete")
+      end  
+    end
+    
+    describe "show" do
+      it "should show a particular valid application" do
+        application = Factory.create(:application)
+        get :show, :id => application.id
+        response.should be_success
+      end
+      
+      it "will display a validation error for invalid application" do
+        get :show, :id => 999
+        response.should redirect_to(admin_applications_path)
+        flash[:notice].should == "The Application you were looking for doesn't exist"
+      end
+      
+    end
+
+    describe "delete" do
+      it "will destroy the record" do
+        application = Factory.create(:application)
+        delete :destroy, :id => application.id
+        Application.find_by_id(application.id).should be_nil
+        response.should redirect_to(admin_applications_path)
       end
     end
+    
   end
   
 end
