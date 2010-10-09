@@ -16,7 +16,6 @@ Feature: CMS
   Scenario: I can see the list of grant applications
     Given a link "link_to_page1" exists with ref: "http://www.example1.com", text: "example1.com"
     When I go to the applications page
-    # And show me the page
     # Then should see "grant 1"
     # And should see "grant 2"
     # And should see "grant 3"
@@ -24,9 +23,7 @@ Feature: CMS
   # Scenario: I can see the list of favourites links
   #   Given a link "link_to_page1" exists with ref: "http://www.example1.com"
   #   When I go to the ultimate page
-  #   And show me the page
   #   Then I should see "http://www.example1.com"
-  #   
   #   And I should see "edit"
   #   And I should see "delete"
   # 
@@ -35,7 +32,7 @@ Feature: CMS
   #   Given a link "link_to_page1" exists with ref: "http://www.example1.com"
   #   When I go to the ultimate page
   #   And I follow "edit"
-  #   And I fill "ref" with "http://www.example2.com"
+  #   And I fill in "ref" with "http://www.example2.com"
   #   And I press submit
   #   Then I should see "http://www.example2.com"
   #   And I should not see "http://www.example1.com"
