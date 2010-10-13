@@ -10,28 +10,28 @@ development:
 # Do not set this db to the same as development or production.
 test:
   adapter: mysql
-  database: extra_special_trust_test
+  database: extra_special_test
   username: extraspe
   password:
   host: localhost
 
 cucumber:
   adapter: mysql
-  database: extra_special_trust_test
+  database: extra_special_test
   username: extraspe
   password:
   host: localhost
 
 staging:
   adapter: mysql
-  database: extra_special_trust_staging
+  database: extra_special_staging
   username: extraspe
   password: 
   host: localhost
   
 production:
   adapter: mysql
-  database: extra_special_trust_production
+  database: extra_special_production
   username: extraspe
   password: 
   host: localhost

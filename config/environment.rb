@@ -9,7 +9,7 @@ require File.join(File.dirname(__FILE__), 'boot')
 Rails::Initializer.run do |config|
 
   config.gem 'be_valid_asset',   :lib => false
-
+  config.gem "paperclip"
 
   if %w(development test cucumber).include?(RAILS_ENV)
     config.gem 'mime-types',       :lib => false, :version => '= 1.16'
@@ -22,7 +22,6 @@ Rails::Initializer.run do |config|
     config.gem 'cucumber'
     config.gem 'cucumber-rails',   :lib => false, :version => '>=0.3.0'
     config.gem 'capybara',         :lib => false, :version => '= 0.3.9'
-    config.gem "paperclip"
     config.gem "pickle"
   end
   
