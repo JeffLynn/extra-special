@@ -7,16 +7,17 @@ RAILS_GEM_VERSION = '2.3.8' unless defined? RAILS_GEM_VERSION
 require File.join(File.dirname(__FILE__), 'boot')
 
 Rails::Initializer.run do |config|
-  
+
+  config.gem 'be_valid_asset',   :lib => false
+  config.gem 'mime-types',       :lib => false, :version => '= 1.16'
+
   if %w(development test cucumber).include?(RAILS_ENV)
     config.gem 'rack',             :lib => false, :version => '1.1.0'
     config.gem 'database_cleaner', :lib => false, :version => '>=0.5.0' unless File.directory?(File.join(Rails.root, 'vendor/plugins/database_cleaner'))
     config.gem 'rspec',            :lib => false, :version => '>=1.3.0'
     config.gem 'rspec-rails',      :lib => false, :version => '>=1.3.2'
     config.gem 'factory_girl',     :lib => false, :version => ">= 1.2.3"
-    config.gem 'be_valid_asset',   :lib => false
     config.gem 'gherkin',          :lib => false, :version => '= 2.2.4'
-    config.gem 'mime-types',       :lib => false, :version => '= 1.16'
     config.gem 'cucumber'
     config.gem 'cucumber-rails',   :lib => false, :version => '>=0.3.0'
     config.gem 'capybara',         :lib => false, :version => '= 0.3.9'
