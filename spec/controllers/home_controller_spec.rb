@@ -93,5 +93,30 @@ describe HomeController do
       response.should be_success
     end
   end
+  
+  describe "favourites" do
+    before(:each) do
+      @link1 = Factory(:link, :text => "link1")
+      @link2 = Factory(:link, :text => "link2")
+      @link3 = Factory(:link, :text => "link3")
+      @link4 = Factory(:link, :text => "link3")
+    end
+    
+    it "populate odd favourite links to forr odd list" do
+      get :favourites
+      links = assigns[:favourite_links_odd]
+
+      links.count.should == 2
+      links.should include(@link1,@link3)
+    end
+
+    it "populate odd favourite links to forr even list" do
+      get :favourites
+
+      links = assigns[:favourite_links_even]
+      links.count.should == 2
+      links.should include(@link2,@link4)
+    end
+  end
 
 end

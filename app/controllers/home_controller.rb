@@ -30,7 +30,17 @@ class HomeController < ApplicationController
   end
 
   def favourites
-    @favourite_links = Link.find(:all)
+    @favourite_links_odd = []
+    @favourite_links_even = []
+    key = 1
+    Link.find(:all).each do |link|
+      if key.odd?
+        @favourite_links_odd << link 
+      else
+        @favourite_links_even << link
+      end
+      key += 1
+    end
   end
   
 end

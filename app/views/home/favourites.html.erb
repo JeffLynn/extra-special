@@ -1,13 +1,21 @@
 <img alt="Home" src="/images/what_we_do.png" />
 <h1 class="section_title">Our favourite websites</h1>
-
-<div class="two_columns_main_content">
-  <p class="main_content left_column">
-    <% @favourite_links.each do |link|%>
-      <%= link_to link.text, link.ref %> <br/>
+<div class="two_columns_main_content fovourites">
+  <div class="main_content left_column">
+    <% @favourite_links_odd.each do |link|%>
+      <h4><%=h link.text %></h4>
+      <p class="link_reference">
+        <%= link_to link.ref, link.ref %><br/>
+      </p>
     <% end %>
-  </p>
+  </div>
 
-  <p class="main_content right_column">
-  </p>
+  <div class="main_content right_column">
+    <% @favourite_links_even.each do |link|%>
+      <h4><%=h link.text %></h4>
+      <p class="link_reference">
+        <%= link_to link.ref, link.ref %><br/>
+      </p>
+    <% end %>
+  </div>
 </div>

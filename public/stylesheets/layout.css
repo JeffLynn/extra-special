@@ -27,15 +27,30 @@ q:before, q:after { content:''; }
 }
 
 div#cross_box {border-top:1px solid #ddd; width:160px; height: 10px; margin-left: 127px; float:left;}
-#footer .nav_bar{margin-left:287px; padding-top:10px;border-top:1px solid #ddd;border-left:1px solid #ddd;}
+#footer .nav_bar{
+  margin-left:287px;
+  padding-top:10px;
+  border-top:1px solid #ddd;
+  border-left:1px solid #ddd;
+  width: 694px;
+}
+#footer ul {
+  list-style-type: none;
 
+}
 #footer li
 {
-  display: inline;
-  margin-left:25px;
+  padding-left: 29px;
+  display: block;
+  float: left;
 }
+@-moz-document url-prefix() { #footer li {padding-left: 28px;} }
 
-
+#footer li.first {
+  padding-left: 0px;
+  padding-right: 2px;
+}
+@-moz-document url-prefix() {#footer li.first { padding-right: 0px;} }
 
 #left_menu
 {
@@ -48,10 +63,9 @@ div#cross_box {border-top:1px solid #ddd; width:160px; height: 10px; margin-left
 #body_section
 {
   margin-left: 287px;
-  border-left: 1px solid #ddd; 
+  border-left: 1px solid #ddd;
   padding: 20px;
-  min-height:515px;
-  border-bottom: 1 px solid #ddd;
+  min-height: 338px;
   width: 700px;
 }
 
@@ -60,38 +74,48 @@ div#cross_box {border-top:1px solid #ddd; width:160px; height: 10px; margin-left
   display: block;
   list-style: none;
   padding-top: 10px;
-  padding-left: 25px;  
+  padding-left: 25px;
 }
 
+#left_menu li.active a{
+  color: #F26A6A;
+}
  a
 {
   text-decoration:none;
-  color: #888;
+  color: #999;
   font-size: 0.9em;
 }
 
 div.two_columns_main_content
 {  
   width: 676px;
+  height: 250px;
   padding-top: 10px;
 }
 
 p.main_content
 {
-  color: #888;
+  color: #999;
   font-size: 0.8em;
-  line-height: 1.8em;  
+  line-height: 1.8em;
 }
 
 p {font: helvetica;}
 p.left_column{ float: left; width: 326px;}
 p.right_column { margin-left: 346px;}
 
+div.left_column{ float: left; width: 326px;}
+div.right_column { margin-left: 346px;}
+
+p.stories {
+  padding-top:10px;
+}
 h1.section_title
 {
-  color: #888;
+  color: #999;
   font-size: 1.4em;
-  width: 676px;
+/*  width: 676px;*/
   padding: 20px 0 10px 10px;
   margin-bottom: 5px;
   font-style: italic;
@@ -106,17 +130,20 @@ ol#story_list {
     padding: 5px;
 }
 
+ol#story_list li {
+  margin-bottom: 10px;
+}
 ol#story_list a
 {
   text-decoration:none;
-  color: #888;
+  color: #999;
   font-size: 12pt;
   font-family: Georgia, Times, serif;
 }
 
 ol#story_list li.active a
 {
-  color: red;
+  color: #F26A6A;
 }
 
 div#story {
@@ -124,7 +151,7 @@ div#story {
     padding: 20px;
     border-left: 1px solid #ddd;
     width: 518px;
-    color: #888;
+    color: #999;
     font-family: Georgia, Times, serif;
 }
 
@@ -139,7 +166,7 @@ div#story {
 */
 form {
     font-family: Georgia, Times, serif;
-    color: #888;
+    color: #999;
 }
 
 form p, div.p_like{padding: 15px 0;}
@@ -152,7 +179,7 @@ form label, form .label
 }
 
 form div.checkboxes{ margin-left: 350px; font-size:0.8em;}
-textarea, input.text{width: 338px; border: 1px solid #888;}
+textarea, input.text{width: 338px; border: 1px solid #ccc;}
 textarea{height: 125px;}
 input.text{height: 23px; width:338;}
 
@@ -163,8 +190,9 @@ input.submit
     background-color: #ef3c37;
     color: white;
     font-family: Georgia, Times, serif;
-    font-weight: bold;
+    letter-spacing: 0.05em;
     font-size: 12pt;
+    border:none;
 }
 
 span.mandatory{color: #ef3c37;}
@@ -176,11 +204,39 @@ div#notes
     margin-top: 85px;
     font-style: italic;
     font-family: Georgia, Times, serif;
-    color: #888;
+    color: #999;
 }
 
 div#notes p
 {
     padding: 15px 0;
     line-height: 200%;
+}
+
+#footer p {
+  text-align: right;
+  color: #999;
+  font-size: 0.9em;
+  line-height: 1.8em;
+  padding-top: 80px;
+}
+
+p.link_reference {
+  color: #999;
+  width: 320px;
+  margin-bottom: 20px;
+}
+
+.fovourites {
+  margin-left: 10px;
+}
+
+.fovourites h4{
+  color: #999;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+p.link_reference a{ 
+  color: #3EA9B9;
 }

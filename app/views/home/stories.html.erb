@@ -10,7 +10,7 @@
     <%= image_tag(@story.picture.url(:banner)) if @story %>
   </div>
   <div id="text">
-    <h1><%= h(@story.title) if @story %></h1>
-    <%= @story.body if @story %>
+    <h1 class="section_title"><%= h(@story.title) if @story %></h1>
+    <p class="main_content stories"><%= @story.body if @story %></p>
   </div>
 </div>
