@@ -3,7 +3,6 @@ html, body, h1, h2, h3, h4, h5, h6, p, ol, ul, li, pre, code, address, variable,
 {
  padding: 0;
  margin: 0;
- font-size: 100%;
  font-weight: normal;
 }
 table { border-collapse: collapse; border-spacing: 0; }
@@ -15,6 +14,16 @@ q:before, q:after { content:''; }
 /**** end reset ****/
 
 .clearfix {display: inline-block;}
+body {
+  font-family: Georgia, Times, serif;
+  color: #aeafb3;
+  font-size: 0.8em;
+}
+
+a {
+  color: #aeafb3;
+  text-decoration:none;
+}
 
 #header
 {
@@ -26,12 +35,12 @@ q:before, q:after { content:''; }
   margin-left: 80px;
 }
 
-div#cross_box {border-top:1px solid #ddd; width:160px; height: 10px; margin-left: 127px; float:left;}
+div#cross_box {border-top:1px solid #cac9ce; width:160px; height: 10px; margin-left: 127px; float:left;}
 #footer .nav_bar{
   margin-left:287px;
   padding-top:10px;
-  border-top:1px solid #ddd;
-  border-left:1px solid #ddd;
+  border-top:1px solid #cac9ce;
+  border-left:1px solid #cac9ce;
   width: 694px;
 }
 #footer ul {
@@ -44,13 +53,14 @@ div#cross_box {border-top:1px solid #ddd; width:160px; height: 10px; margin-left
   display: block;
   float: left;
 }
-@-moz-document url-prefix() { #footer li {padding-left: 28px;} }
+@-moz-document url-prefix() { #footer li {padding-left: 30px;} }
 
 #footer li.first {
   padding-left: 0px;
-  padding-right: 2px;
+  padding-right: 6px;
 }
-@-moz-document url-prefix() {#footer li.first { padding-right: 0px;} }
+
+@-moz-document url-prefix() {#footer li.first { padding-right: 2px;} }
 
 #left_menu
 {
@@ -63,7 +73,7 @@ div#cross_box {border-top:1px solid #ddd; width:160px; height: 10px; margin-left
 #body_section
 {
   margin-left: 287px;
-  border-left: 1px solid #ddd;
+  border-left: 1px solid #cac9ce;
   padding: 20px;
   min-height: 338px;
   width: 700px;
@@ -80,12 +90,7 @@ div#cross_box {border-top:1px solid #ddd; width:160px; height: 10px; margin-left
 #left_menu li.active a{
   color: #F26A6A;
 }
- a
-{
-  text-decoration:none;
-  color: #999;
-  font-size: 0.9em;
-}
+
 
 div.two_columns_main_content
 {  
@@ -96,8 +101,6 @@ div.two_columns_main_content
 
 p.main_content
 {
-  color: #999;
-  font-size: 0.8em;
   line-height: 1.8em;
 }
 
@@ -113,14 +116,12 @@ p.stories {
 }
 h1.section_title
 {
-  color: #999;
   font-size: 1.4em;
-/*  width: 676px;*/
   padding: 20px 0 10px 10px;
   margin-bottom: 5px;
   font-style: italic;
   font-weight: normal;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #cac9ce;
 }
 
 ol#story_list {
@@ -136,8 +137,6 @@ ol#story_list li {
 ol#story_list a
 {
   text-decoration:none;
-  color: #999;
-  font-size: 12pt;
   font-family: Georgia, Times, serif;
 }
 
@@ -149,37 +148,40 @@ ol#story_list li.active a
 div#story {
     margin: -15px 0 -15px 180px;
     padding: 20px;
-    border-left: 1px solid #ddd;
-    width: 518px;
-    color: #999;
-    font-family: Georgia, Times, serif;
-}
-
-/*h1 {
-    padding: 25px 10px 12px;
-    font-size: 16pt;
-    border-bottom: 1px solid #ddd;
-    margin-bottom: 15px;
-    font-style: italic;
-    font-family: Georgia, Times, serif;
-}
-*/
-form {
-    font-family: Georgia, Times, serif;
-    color: #999;
+    border-left: 1px solid #cac9ce;
+/*    width: 518px;*/
 }
 
 form p, div.p_like{padding: 15px 0;}
+div.p_like span.label{
+  width: 335px;
+}
+
 form label, form .label
 {
     display: inline-block;
-    width: 350px;
+    width: 338px;
     float: left;
-    font-size: 0.8em;
 }
 
-form div.checkboxes{ margin-left: 350px; font-size:0.8em;}
-textarea, input.text{width: 338px; border: 1px solid #ccc;}
+form div.checkboxes{ width: 350px;margin-left: 334px; position: relative;}
+form div.checkboxes ul {
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+  padding-left: 5px;
+  z-index: 100;
+}
+form div.checkboxes ul li input{
+  position: absolute;
+  left: 0;
+}
+form div.checkboxes ul li span{
+  position: relative;
+  left: 20px;
+  top: 3px;
+}
+textarea, input.text{width: 338px; border: 1px solid #cac9ce;}
 textarea{height: 125px;}
 input.text{height: 23px; width:338;}
 
@@ -189,9 +191,7 @@ input.submit
     height: 34px;
     background-color: #ef3c37;
     color: white;
-    font-family: Georgia, Times, serif;
-    letter-spacing: 0.05em;
-    font-size: 12pt;
+    font-size:1.3em;
     border:none;
 }
 
@@ -200,11 +200,9 @@ span.mandatory{color: #ef3c37;}
 div#notes
 {
     padding: 25px 10px 12px;
-    border-top: 1px solid #ddd;
+    border-top: 1px solid #cac9ce;
     margin-top: 85px;
     font-style: italic;
-    font-family: Georgia, Times, serif;
-    color: #999;
 }
 
 div#notes p
@@ -215,14 +213,11 @@ div#notes p
 
 #footer p {
   text-align: right;
-  color: #999;
-  font-size: 0.9em;
   line-height: 1.8em;
   padding-top: 80px;
 }
 
 p.link_reference {
-  color: #999;
   width: 320px;
   margin-bottom: 20px;
 }
@@ -232,11 +227,29 @@ p.link_reference {
 }
 
 .fovourites h4{
-  color: #999;
   text-transform: uppercase;
   margin-bottom: 10px;
 }
 
 p.link_reference a{ 
   color: #3EA9B9;
+}
+.contact_us {
+}
+.contact_us a, .how_you_can_help a {
+  color: #F26A6A;
+}
+.contact_us p, .how_you_can_help p {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.contact_us ul, .how_you_can_help ul {
+  margin: 0;
+  padding: 0;
+  margin-top: 20px;
+  list-style-type: none;
+}
+
+.contact_us li, .how_you_can_help li {
+ margin-bottom: 10px;
 }

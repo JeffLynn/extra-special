@@ -41,16 +41,20 @@
   <div class="p_like">
     <span class="label">If you are in receipt of any of the following funding<br/> please tick the appropriate box <%= mandatory_indicator() %></span>
     <div class="checkboxes">
-      <div><%= f.check_box(:registered_care_allowance) %> Registered care allowance</div>
-      <div><%= f.check_box(:supported_living_allowance) %> Supported living allowance</div>
-      <div><%= f.check_box(:domiciliary_allowance) %> Domiciliary allowance</div>
-      <div><%= f.check_box(:no_additional_funding) %> None</div>
+      <ul>
+        <li><%= f.check_box(:registered_care_allowance) %> <span>Registered care allowance</span></li>
+        <li><%= f.check_box(:supported_living_allowance) %> <span>Supported living allowance</span></li>
+        <li><%= f.check_box(:domiciliary_allowance) %> <span>Domiciliary allowance</span></li>
+        <li><%= f.check_box(:no_additional_funding) %> <span>None</span></li>
+      </ul>
     </div>
   </div>
   <div class="p_like">
     <span class="label">&nbsp;</span>
     <div class="checkboxes">
-      <div><%= f.check_box(:accept_terms_and_conditions) %> Click here to say you accept out Terms & Conditions</div>
+      <ul>
+        <li><%= f.check_box(:accept_terms_and_conditions) %> <span>Click here to say you accept out Terms & Conditions</span></li>
+      </ul>
     </div>
   </div>
   <div class="p_like">

@@ -16,7 +16,7 @@
 
 class Story < ActiveRecord::Base
   has_attached_file :picture,
-    :styles => {:banner => '519x233#',
+    :styles => {:banner => '475x233#',
                :thumbnail => '111x50#'
     }
 

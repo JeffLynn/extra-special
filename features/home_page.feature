@@ -60,4 +60,4 @@ Feature: Homepage
       And I should see "example1.com"
       And I should see "example2.com"
       And I should see a link called "example1.com" linking to example page "1"
-      And I should see a link called "example2.com" linking to example page "2"    
+      And I should see a link called "example2.com" linking to example page "2"
