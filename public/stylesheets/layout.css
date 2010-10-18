@@ -35,6 +35,8 @@ a {
 }
 
 #header img.logo {
+  margin-top: 1px;
+  padding: 0;
   border-right: 1px solid #cac9ce;
 }
 
