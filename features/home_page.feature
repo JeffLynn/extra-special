@@ -50,13 +50,13 @@ Feature: Homepage
 
   Scenario: viewing the contact us page
     When I go to the contact us
-    Then I should see the image "/images/rails.png"
+    Then I should see the image "/images/contact_us.png"
 
   Scenario: viewing the favourites page
     Given a link "link_to_page1" exists with ref: "http://www.example1.com", text: "example1.com"
       And a link "link_to_page2" exists with ref: "http://www.example2.com", text: "example2.com"
     When I go to the favourites page
-    Then I should see the image "/images/what_we_do.png"
+    Then I should see the image "/images/favourites.png"
       And I should see "example1.com"
       And I should see "example2.com"
       And I should see a link called "example1.com" linking to example page "1"
