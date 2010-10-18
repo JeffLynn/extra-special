@@ -50,22 +50,21 @@ div#cross_box {border-top:1px solid #cac9ce; width:160px; height: 10px; margin-l
 }
 #footer ul {
   list-style-type: none;
-
 }
 #footer li
 {
-  padding-left: 29px;
+  padding-left: 15px;
   display: block;
   float: left;
 }
-@-moz-document url-prefix() { #footer li {padding-left: 30px;} }
+@-moz-document url-prefix() { #footer li {padding-left: 16px;} }
 
 #footer li.first {
-  padding-left: 0px;
+  padding-left: 2px;
   padding-right: 6px;
 }
 
-@-moz-document url-prefix() {#footer li.first { padding-right: 2px;} }
+@-moz-document url-prefix() {#footer li.first { padding-right: 5px;} }
 
 #left_menu
 {
@@ -88,7 +87,7 @@ div#cross_box {border-top:1px solid #cac9ce; width:160px; height: 10px; margin-l
 {
   display: block;
   list-style: none;
-  padding-top: 10px;
+  padding-top: 12px;
   padding-left: 25px;
 }
 

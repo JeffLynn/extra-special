@@ -2,9 +2,9 @@
   <li class="first <%= actual_page?('index') %>"><%= link_to 'home', root_path %></li>
   <li class="<%= actual_page?('about_us') %>"><%= link_to 'about us', about_us_path %></li>
   <li class="<%= actual_page?('what_we_do') %>"><%= link_to 'what we do', what_we_do_path %></li>
-  <li class="<%= actual_page?('stories') %>"><%= link_to 'stories', stories_path %></li>
+  <li class="<%= actual_page?('stories') %>"><%= link_to 'extraspecial stories', stories_path %></li>
   <li class="<%= actual_page?('how_you_can_help') %>"><%= link_to 'how you can help', how_you_can_help_path %></li>
   <li class="<%= actual_page?('new') %>"><%= link_to 'how to apply', new_application_path %></li>
+  <li class="<%= actual_page?('favourites') %>"><%= link_to 'favourite sites', favourites_path %></li>
   <li class="<%= actual_page?('contact_us') %>"><%= link_to 'contact us', contact_us_path %></li>
-  <li class="<%= actual_page?('favourites') %>"><%= link_to 'favourites', favourites_path %></li>
 </ul>
