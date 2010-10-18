@@ -27,12 +27,15 @@ a {
 
 #header
 {
-  background-image: url(../images/header.png);
-  background-position: top left;
-  background-repeat: no-repeat;
-  width: 943px;
+  width: 923px;
   height: 135px;
+  margin-top: 10px;
   margin-left: 80px;
+  border-bottom: 1px solid #cac9ce;
+}
+
+#header img.logo {
+  border-right: 1px solid #cac9ce;
 }
 
 div#cross_box {border-top:1px solid #cac9ce; width:160px; height: 10px; margin-left: 127px; float:left;}
@@ -87,13 +90,19 @@ div#cross_box {border-top:1px solid #cac9ce; width:160px; height: 10px; margin-l
   padding-left: 25px;
 }
 
-#left_menu li.active a{
-  color: #F26A6A;
-}
+#left_menu li.index a{ color: #ee3d37; }
+#left_menu li.about_us a{ color: #aa7b51; }
+#left_menu li.what_we_do a{ color: #21aae0; }
+#left_menu li.stories a{ color: #ed3b37; }
+#left_menu li.new a{ color: #009345; }
+#left_menu li.how_you_can_help a{ color: #c5776b; }
+#left_menu li.contact_us a{ color: #e47f27; }
+#left_menu li.favourites a{ color: #3fa8bb; }
 
+#footer li a { color:#AEAFB3; }
 
 div.two_columns_main_content
-{  
+{
   width: 676px;
   height: 250px;
   padding-top: 10px;
@@ -232,13 +241,16 @@ p.link_reference {
 }
 
 p.link_reference a{ 
-  color: #3EA9B9;
+  color: #3FA8BB;
 }
-.contact_us {
+.contact_us a{
+  color: #E47F27;
 }
-.contact_us a, .how_you_can_help a {
-  color: #F26A6A;
+
+.how_you_can_help a {
+  color: #C5776B;
 }
+
 .contact_us p, .how_you_can_help p {
   padding-top: 10px;
   padding-bottom: 10px;

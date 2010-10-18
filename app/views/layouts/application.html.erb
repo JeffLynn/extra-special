@@ -14,10 +14,12 @@
 </head>
 <body>
   <div id="header">
+    <%= link_to "#{image_tag('logo.png', :class => 'logo' )}", root_path, :title =>"Home page" %>
+    <%= image_tag('sign.png', :alt => 'Extra special trust is here to help, particularly when there is no one else to do so.')%>
   </div>
 
   <div id="left_menu">
-    <%= render :partial => '/layouts/main_menu', :locals => {:nav_class => 'nav_bar'} %>  
+    <%= render :partial => '/layouts/main_menu', :locals => {:nav_class => 'nav_bar'} %>
   </div>
     
   <div id="body_section">
@@ -27,7 +29,11 @@
   <div id="footer" class="clearfix">
     <div id="cross_box"></div>
     <%= render :partial => '/layouts/main_menu', :locals => {:nav_class => 'nav_bar'} %>
-    <p class="footnote">website designed & built by unboxed consulting</p>
+    <p class="footnote">website designed & built by unboxed consulting <br />
+      <% if params['action'] == 'index' %>
+      Registered Charity: 1129928
+      <% end %>
+    </p>
   </div>
 </body>
 </html>

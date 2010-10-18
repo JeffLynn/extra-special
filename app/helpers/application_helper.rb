@@ -5,7 +5,7 @@ module ApplicationHelper
   end
 
   def actual_page?(page_name)
-    return 'active' if params['action'] == page_name
+    return page_name if params['action'] == page_name
 
     'inactive'
   end
