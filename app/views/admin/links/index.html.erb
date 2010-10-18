@@ -3,10 +3,11 @@
   <%= link_to("Add New Favourite Link", new_admin_link_path) %>
 </div>
 
-<table>
+<table class="links">
   <tr>
     <th>Reference</th>
-    <th>text</th>
+    <th>Name</th>
+    <th>Description</th>
     <th></th>
     <th></th>
   </tr>
@@ -15,6 +16,7 @@
     <tr>
       <td><%= link.ref %></td>
       <td><%= link.text %></td>
+      <td><%= link.description %></td>
       <td><%= link_to('edit',    edit_admin_link_path(link))  %></td>
       <td><%= link_to('delete', admin_link_path(link), :method => :delete, :confirm => "Are you sure you want to delete '#{h(link.ref)}'?")%></td>
     </tr>

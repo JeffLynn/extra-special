@@ -3,6 +3,7 @@
   <%= error_messages_for :link %>
   <p><%= f.label(:ref) %><%= f.text_field(:ref) %></p>
   <p><%= f.label(:text) %><%= f.text_field(:text) %></p>
+  <p><%= f.label(:description) %><%= f.text_field(:description) %></p>
 
   <div class="buttons">
     <%= f.submit @link.id.nil? ? 'Create' : 'Update' %>

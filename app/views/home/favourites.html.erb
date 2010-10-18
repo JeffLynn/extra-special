@@ -4,6 +4,9 @@
   <div class="main_content left_column">
     <% @favourite_links_odd.each do |link|%>
       <h4><%=h link.text %></h4>
+      <% if link.description.present? %>
+        <p><%=h link.description %></p>
+      <% end %>
       <p class="link_reference">
         <%= link_to link.ref, link.ref %><br/>
       </p>
@@ -13,6 +16,9 @@
   <div class="main_content right_column">
     <% @favourite_links_even.each do |link|%>
       <h4><%=h link.text %></h4>
+      <% if link.description.present? %>
+        <p><%=h link.description %></p>
+      <% end %>
       <p class="link_reference">
         <%= link_to link.ref, link.ref %><br/>
       </p>
