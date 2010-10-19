@@ -1,0 +1,21 @@
+source "http://gemcutter.org"
+source "http://gems.github.com"
+
+gem "mysql"
+gem "nokogiri"
+gem 'rack','1.1.0'
+gem 'database_cleaner'
+gem 'rspec'
+gem 'rspec-rails'
+gem 'factory_girl'
+gem 'be_valid_asset'
+gem 'gherkin','2.2.4'
+gem 'mime-types','1.16'
+gem 'cucumber'
+gem 'cucumber-rails'
+gem 'capybara'
+gem "paperclip"
+gem "pickle"
+gem "capistrano"
+gem "capistrano-ext"
+gem "launchy"
