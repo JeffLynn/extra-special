@@ -9,8 +9,9 @@ require File.join(File.dirname(__FILE__), 'boot')
 Rails::Initializer.run do |config|
 
   config.gem 'be_valid_asset',   :lib => false, :version => '= 1.1.1'
-  config.gem "paperclip"
-
+  config.gem "paperclip"         
+  config.gem 'rack',             :lib => false, :version => '1.1.0'
+  
   if %w(development test cucumber).include?(RAILS_ENV)
     config.gem 'mime-types',       :lib => false, :version => '= 1.16'
     config.gem 'rack',             :lib => false, :version => '= 1.1.0'
