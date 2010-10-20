@@ -11,6 +11,6 @@
   </div>
   <div id="text">
     <h1 class="section_title"><%= h(@story.title) if @story %></h1>
-    <p class="main_content stories"><%= @story.body if @story %></p>
+    <p class="main_content stories"><%= simple_format(@story.body) if @story %></p>
   </div>
 </div>

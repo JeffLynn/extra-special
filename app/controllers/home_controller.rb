@@ -11,6 +11,7 @@ class HomeController < ApplicationController
 
   def stories
     @stories = Story.all(:order => 'name ASC')
+    
     unless params[:story_id] && @story = Story.find_by_id(params[:story_id])
       if @stories && @stories.length > 0
         @story = @stories.first
@@ -21,9 +22,6 @@ class HomeController < ApplicationController
   end
 
   def how_you_can_help
-  end
-
-  def how_to_apply
   end
 
   def contact_us

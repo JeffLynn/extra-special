@@ -18,11 +18,18 @@ describe Link do
     
     link.valid?.should == false
   end
-
+  
+  it "should validate the format of ref" do
+    link = Factory.build(:link, :ref=>'www.example.com', :text=>'example.com')
+    
+    link.valid?.should == false
+  end
+  
   it "should validate the presence of text" do
     link = Factory.build(:link, :ref=>'http://example.com', :text=>'')
     
     link.valid?.should == false    
   end
   
+ 
 end
