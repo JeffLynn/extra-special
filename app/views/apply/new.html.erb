@@ -1,5 +1,5 @@
 <img alt="Home" src="/images/how_to_apply.png" />
-<h1 class="section_title">How to apply</h1>
+<h1 class="section_title how_to_apply_title">How to apply</h1>
 <% form_for(@application) do |f| %>
   <%= f.error_messages %>
   <p>
@@ -42,10 +42,10 @@
     <span class="label">If you are in receipt of any of the following funding<br/> please tick the appropriate box <%= mandatory_indicator() %></span>
     <div class="checkboxes">
       <ul>
-        <li><%= f.check_box(:registered_care_allowance) %> <span>Registered care allowance</span></li>
-        <li><%= f.check_box(:supported_living_allowance) %> <span>Supported living allowance</span></li>
-        <li><%= f.check_box(:domiciliary_allowance) %> <span>Domiciliary allowance</span></li>
-        <li><%= f.check_box(:no_additional_funding) %> <span>None</span></li>
+        <li><%= f.check_box(:registered_care_allowance) %> <%= f.label :registered_care_allowance, 'Registered care allowance' %></li>
+        <li><%= f.check_box(:supported_living_allowance) %> <%= f.label :supported_living_allowance, 'Supported living allowance' %></li>
+        <li><%= f.check_box(:domiciliary_allowance) %> <%= f.label :domiciliary_allowance, 'Domiciliary allowance' %></li>
+        <li><%= f.check_box(:no_additional_funding) %> <%= f.label :no_additional_funding, 'None' %></li>
       </ul>
     </div>
   </div>
@@ -53,7 +53,7 @@
     <span class="label">&nbsp;</span>
     <div class="checkboxes">
       <ul>
-        <li><%= f.check_box(:accept_terms_and_conditions) %> <span>Click here to say you accept out Terms & Conditions</span></li>
+        <li><%= f.check_box(:accept_terms_and_conditions) %> <%= f.label :accept_terms_and_conditions, 'Click here to say you accept out Terms & Conditions' %></li>
       </ul>
     </div>
   </div>
