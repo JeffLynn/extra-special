@@ -157,6 +157,7 @@ h1.about_us_title { background-image: url(/images/headers/about_us.gif); }
 h1.what_we_do_title { background-image: url(/images/headers/what_we_do.gif); }
 h1.how_you_can_help_title { background-image: url(/images/headers/how_you_can_help.gif); }
 h1.how_to_apply_title { background-image: url(/images/headers/how_to_apply.gif); }
+h1.contact_us_title { background-image: url(/images/headers/contact_us.gif); }
 
 ol#story_list {
     list-style-type: none;
