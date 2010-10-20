@@ -13,9 +13,11 @@
   
 </head>
 <body>
+<div id="outer_page_wrapper">
+<div id="inner_page_wrapper">
   <div id="header">
-    <%= link_to "#{image_tag('logo.png', :class => 'logo' )}", root_path, :title =>"Home page" %>
-    <%= image_tag('sign.png', :alt => 'Extra special trust is here to help, particularly when there is no one else to do so.')%>
+    <%= link_to image_tag('logo.png', :alt => 'The Extra Special Trust'), root_path, :title =>"Home page", :class => 'logo' %>
+    <p id="header_strap">Extra special trust is here to help, particularly when there is no one else to do so.</p>
   </div>
 
   <div id="left_menu">
@@ -27,13 +29,14 @@
   </div>  
 
   <div id="footer" class="clearfix">
-    <div id="cross_box"></div>
     <%= render :partial => '/layouts/main_menu', :locals => {:nav_class => 'nav_bar'} %>
-    <p class="footnote">website designed & built by unboxed consulting <br />
+    <p class="footnote">website designed & built by <a href="http://www.unboxedconsulting.com">unboxed consulting</a><br />
       <% if params['action'] == 'index' %>
       Registered Charity: 1129928
       <% end %>
     </p>
   </div>
+</div>
+</div>
 </body>
 </html>

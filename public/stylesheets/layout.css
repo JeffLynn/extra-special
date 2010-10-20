@@ -1,28 +1,50 @@
-/**** reset css ****/
-html, body, h1, h2, h3, h4, h5, h6, p, ol, ul, li, pre, code, address, variable, form, fieldset, blockquote
-{
- padding: 0;
- margin: 0;
- font-weight: normal;
-}
-table { border-collapse: collapse; border-spacing: 0; }
-td, th, caption { font-weight: normal; text-align: left; }
-img, fieldset { border: 0; }
-ol { padding-left: 1.4em; list-style: decimal; }
-ul { padding-left: 1.4em; list-style:square; }
-q:before, q:after { content:''; }
-/**** end reset ****/
+/* overall */
 
-.clearfix {display: inline-block;}
+* { margin: 0px; padding: 0px; border: none; }
+
+.clearfix:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+ 
+.clearfix {
+	display: inline-block;
+}
+ 
+html[xmlns] .clearfix {
+	display: block;
+}
+ 
+* html .clearfix {
+	height: 1%;
+}
+
 body {
   font-family: Georgia, Times, serif;
   color: #aeafb3;
-  font-size: 0.8em;
+  font-size: 62.5%;
 }
-
 a {
   color: #aeafb3;
   text-decoration:none;
+}
+
+
+
+/* main layout */
+#outer_page_wrapper {
+  text-align: center;  
+}
+#inner_page_wrapper {
+  width: 923px;
+  margin-left: auto;
+  margin-right: auto; 
+  padding: 0 20px;
+  text-align: left;
 }
 
 #header
@@ -30,74 +52,56 @@ a {
   width: 923px;
   height: 135px;
   margin-top: 10px;
-  margin-left: 80px;
   border-bottom: 1px solid #cac9ce;
+  position: relative;
 }
-
-#header img.logo {
-  margin-top: 1px;
+#header .logo {
   padding: 0;
   border-right: 1px solid #cac9ce;
+  display: block; 
+  margin-top: 1px;
+  width: 207px;
+  padding-bottom: 1px;
 }
+#header #header_strap { background-image: url(/images/sign.png); width: 0px; padding-left: 370px; height: 84px; overflow: hidden; position: absolute; top: 51px; left: 208px; }
 
-div#cross_box {border-top:1px solid #cac9ce; width:160px; height: 10px; margin-left: 127px; float:left;}
-#footer .nav_bar{
-  margin-left:287px;
-  padding-top:10px;
-  border-top:1px solid #cac9ce;
+div#cross_box {border-top:1px solid #cac9ce; width:160px; height: 10px; margin-left: 51px; float:left;}
+
+#footer { clear: both; border-top: 1px solid #cac9ce; margin-left: 47px; }
+#footer .nav_bar {
+  margin-left:160px;
+  padding-top:12px;
   border-left:1px solid #cac9ce;
   width: 694px;
   height: 40px;
+  padding-left: 20px;
 }
 #footer ul {
   list-style-type: none;
 }
-#footer li
-{
-  padding-left: 15px;
+#footer li {
   display: block;
   float: left;
+  margin-right: 11px;
 }
-@-moz-document url-prefix() { #footer li {padding-left: 16px;} }
-
 #footer li.first {
-  padding-left: 2px;
-  padding-right: 6px;
+
 }
+#footer li a { color:#AEAFB3; font-size: 1.5em; font-family: times; }
 
-@-moz-document url-prefix() {#footer li.first { padding-right: 5px;} }
-
-#left_menu
-{
+#left_menu {
   float:left;
-  margin-left: 80px;
   height: 200px; 
-  width: 207px;
+  width: 160px;
+  padding: 6px 0 0 47px;
 }
-
-#body_section
-{
-  min-height: 338px;
-  width: 700px;
-  margin-left: 287px;
-  padding: 20px;
-  padding-bottom: 0px;
-  padding-top: 0px;
-  border-left: 1px solid #cac9ce;
-}
-
-#body_section img {
-  margin-top: 20px;
-}
-
-#left_menu li
-{
+#left_menu li {
   display: block;
   list-style: none;
-  padding-top: 12px;
-  padding-left: 25px;
+  padding-top: 11px;
+  font-size: 1.5em;
+  font-family: times;
 }
-
 #left_menu li.index a{ color: #ee3d37; }
 #left_menu li.about_us a{ color: #aa7b51; }
 #left_menu li.what_we_do a{ color: #21aae0; }
@@ -107,7 +111,21 @@ div#cross_box {border-top:1px solid #cac9ce; width:160px; height: 10px; margin-l
 #left_menu li.contact_us a{ color: #e47f27; }
 #left_menu li.favourites a{ color: #3fa8bb; }
 
-#footer li a { color:#AEAFB3; }
+#body_section
+{
+  min-height: 338px;
+  width: 695px;
+  padding: 20px 0 20px 20px;
+  padding-bottom: 0px;
+  padding-top: 0px;
+  border-left: 1px solid #cac9ce;
+  float: left;
+}
+
+#body_section img {
+  margin-top: 18px;
+  margin-bottom: 19px;
+}
 
 div.two_columns_main_content
 {
@@ -261,10 +279,6 @@ p.link_reference a{
 }
 .contact_us a{
   color: #E47F27;
-}
-
-img.home {
-  margin-bottom: 20px;
 }
 
 div.how_you_can_help, div.contact_us {
