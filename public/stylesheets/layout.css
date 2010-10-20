@@ -153,9 +153,9 @@ h1.section_title
   background-repeat: no-repeat;
   background-position: 5px 6px;
 }
-h1.about_us_title {
-  background-image: url(/images/headers/about_us.gif);
-}
+h1.about_us_title { background-image: url(/images/headers/about_us.gif); }
+h1.what_we_do_title { background-image: url(/images/headers/what_we_do.gif); }
+h1.how_you_can_help_title { background-image: url(/images/headers/how_you_can_help.gif); }
 
 ol#story_list {
     list-style-type: none;
@@ -286,18 +286,20 @@ div.how_you_can_help, div.contact_us {
 }
 
 .contact_us p, .how_you_can_help p {
-  padding-top: 10px;
-  padding-bottom: 10px;
+  font-size: 1.4em;
+  margin-top: 30px;
+  line-height: 1.7em;
 }
 .contact_us ul, .how_you_can_help ul {
   margin: 0;
   padding: 0;
-  margin-top: 20px;
+  margin-top: 30px;
   list-style-type: none;
 }
 
 .contact_us li, .how_you_can_help li {
  margin-bottom: 10px;
+ font-size: 1.4em;
 }
 .cleaner {
   clear:both;
