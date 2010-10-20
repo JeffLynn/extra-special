@@ -169,6 +169,7 @@ ol#story_list {
 
 ol#story_list li {
   margin-bottom: 10px;
+  font-size: 1.5em; 
 }
 ol#story_list a
 {
@@ -180,7 +181,7 @@ ol#story_list li.active a
 {
   color: #F26A6A;
 }
-
+div#story .section_title { height: 41px; padding-top: 0px; font-family: garamond; font-weight: normal; font-size: 2.0em; font-style: italic; }
 div#story {
   margin: 0px 0 0px 180px;
   padding: 20px;
@@ -188,6 +189,10 @@ div#story {
 }
 div#story img {
   margin-top: 0;
+}
+div#story p {
+  font-size: 1.4em; line-height: 1.62em; 
+  margin-bottom: 20px; 
 }
 
 form p, div.p_like{padding: 15px 0;}
@@ -239,6 +244,11 @@ input.submit
 
 span.mandatory{color: #ef3c37;}
 
+.errorExplanation { margin: 20px 0px; }
+.errorExplanation p, 
+.errorExplanation li { font-size: 1.5em; }
+.errorExplanation li { margin-left: 13px; }
+
 div#notes
 {
     padding: 25px 0 12px;
@@ -264,19 +274,26 @@ p.link_reference {
   margin-bottom: 20px;
 }
 
-.fovourites {
+div.fovourites {
   margin-left: 10px;
+  padding-top: 24px; 
 }
 
 .fovourites p{
   line-height: 20px;
+  margin-bottom: 10px; 
 }
 
 .fovourites h4{
   text-transform: uppercase;
   margin-bottom: 10px;
+  font-size: 1.4em;
+  font-weight: normal;
+  line-height: 20px;
 }
-
+p.link_reference { 
+  margin-bottom: 35px;
+}
 p.link_reference a{ 
   color: #3FA8BB;
 }

@@ -23,9 +23,6 @@ class HomeController < ApplicationController
   def how_you_can_help
   end
 
-  def how_to_apply
-  end
-
   def contact_us
   end
 

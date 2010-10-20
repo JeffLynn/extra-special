@@ -80,13 +80,6 @@ describe HomeController do
     end
   end
 
-  describe "how to apply" do
-    it "should be successful" do
-      get :how_to_apply
-      response.should be_success
-    end
-  end
-
   describe "contact us" do
     it "should be successful" do
       get :contact_us
