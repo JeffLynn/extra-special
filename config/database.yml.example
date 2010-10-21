@@ -31,7 +31,7 @@ staging:
   
 production:
   adapter: mysql
-  database: extra_special_production
-  username: extraspe
+  database: rt117-extraspecial
+  username: rt117admin
   password: 
   host: localhost

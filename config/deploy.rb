@@ -1,4 +1,4 @@
-set :stages, %w(staging)
+set :stages, %w(staging production)
 set :default_stage, "staging"
 
 set :application, "extra_special_trust"
