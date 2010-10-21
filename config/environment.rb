@@ -8,21 +8,21 @@ require File.join(File.dirname(__FILE__), 'boot')
 
 Rails::Initializer.run do |config|
 
-  config.gem 'be_valid_asset',   :lib => false, :version => '= 1.1.1'
-  config.gem "paperclip",        :version => '= 2.3.4'  
-  config.gem 'rack',             :lib => false, :version => '1.1.0'
-  
+  config.gem 'be_valid_asset',   :lib => false
+  config.gem "paperclip"
+
   if %w(development test cucumber).include?(RAILS_ENV)
     config.gem 'mime-types',       :lib => false, :version => '= 1.16'
-    config.gem 'database_cleaner', :lib => false, :version => '= 0.5.2' unless File.directory?(File.join(Rails.root, 'vendor/plugins/database_cleaner'))
-    config.gem 'rspec',            :lib => false, :version => '= 1.3.0'
-    config.gem 'rspec-rails',      :lib => false, :version => '= 1.3.2'
-    config.gem 'factory_girl',     :lib => false, :version => "= 1.2.3"
+    config.gem 'rack',             :lib => false, :version => '1.1.0'
+    config.gem 'database_cleaner', :lib => false, :version => '>=0.5.0' unless File.directory?(File.join(Rails.root, 'vendor/plugins/database_cleaner'))
+    config.gem 'rspec',            :lib => false, :version => '>=1.3.0'
+    config.gem 'rspec-rails',      :lib => false, :version => '>=1.3.2'
+    config.gem 'factory_girl',     :lib => false, :version => ">= 1.2.3"
     config.gem 'gherkin',          :lib => false, :version => '= 2.2.4'
-    config.gem 'cucumber',         :lib => false, :version => '= 0.9.0'
-    config.gem 'cucumber-rails',   :lib => false, :version => '= 0.3.2'
+    config.gem 'cucumber'
+    config.gem 'cucumber-rails',   :lib => false, :version => '>=0.3.0'
     config.gem 'capybara',         :lib => false, :version => '= 0.3.9'
-    config.gem "pickle",           :version => '= 0.4.2'
+    config.gem "pickle"
   end
   
   # Settings in config/environments/* take precedence over those specified here.
