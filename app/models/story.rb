@@ -15,11 +15,16 @@
 #
 
 class Story < ActiveRecord::Base
-  has_attached_file :picture,
-    :styles => {:banner => '475x233#',
-               :thumbnail => '111x50#'
-    }
-
+    has_attached_file :picture,
+      :styles => {
+        :banner => '475x233#',
+        :thumbnail => '111x50#'
+      },
+      :storage => :s3,
+      :s3_credentials => "#{RAILS_ROOT}/config/s3.yml",
+      :path => ":attachment/:id/:style.:extension",
+      :bucket => "extraspecial"
+      
   validates_presence_of :name
   validates_presence_of :title
   validates_presence_of :body
