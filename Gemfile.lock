@@ -1,6 +1,5 @@
 GEM
-  remote: http://gemcutter.org/
-  remote: http://gems.github.com/
+  remote: http://rubygems.org/
   specs:
     activemodel (3.0.1)
       activesupport (= 3.0.1)
@@ -14,10 +13,6 @@ GEM
     activesupport (3.0.1)
     arel (1.0.1)
       activesupport (~> 3.0.0)
-    aws-s3 (0.6.2)
-      builder
-      mime-types
-      xml-simple
     be_valid_asset (1.1.1)
       rspec
     builder (2.1.2)
@@ -110,14 +105,12 @@ GEM
     term-ansicolor (1.0.5)
     trollop (1.16.2)
     tzinfo (0.3.23)
-    xml-simple (1.0.12)
     yard (0.6.1)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
-  aws-s3
   be_valid_asset
   capistrano
   capistrano-ext
