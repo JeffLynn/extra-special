@@ -1,0 +1,154 @@
+--- !ruby/object:Gem::Specification 
+name: s3
+version: !ruby/object:Gem::Version 
+  hash: 29
+  prerelease: false
+  segments: 
+  - 0
+  - 3
+  - 7
+  version: 0.3.7
+platform: ruby
+authors: 
+- "Jakub Ku\xC5\xBAma"
+autorequire: 
+bindir: bin
+cert_chain: []
+
+date: 2010-10-08 00:00:00 +01:00
+default_executable: 
+dependencies: 
+- !ruby/object:Gem::Dependency 
+  name: proxies
+  prerelease: false
+  requirement: &id001 !ruby/object:Gem::Requirement 
+    none: false
+    requirements: 
+    - - ">="
+      - !ruby/object:Gem::Version 
+        hash: 3
+        segments: 
+        - 0
+        version: "0"
+  type: :runtime
+  version_requirements: *id001
+- !ruby/object:Gem::Dependency 
+  name: test-unit
+  prerelease: false
+  requirement: &id002 !ruby/object:Gem::Requirement 
+    none: false
+    requirements: 
+    - - ">="
+      - !ruby/object:Gem::Version 
+        hash: 3
+        segments: 
+        - 2
+        - 0
+        version: "2.0"
+  type: :development
+  version_requirements: *id002
+- !ruby/object:Gem::Dependency 
+  name: mocha
+  prerelease: false
+  requirement: &id003 !ruby/object:Gem::Requirement 
+    none: false
+    requirements: 
+    - - ">="
+      - !ruby/object:Gem::Version 
+        hash: 3
+        segments: 
+        - 0
+        version: "0"
+  type: :development
+  version_requirements: *id003
+- !ruby/object:Gem::Dependency 
+  name: bundler
+  prerelease: false
+  requirement: &id004 !ruby/object:Gem::Requirement 
+    none: false
+    requirements: 
+    - - ">="
+      - !ruby/object:Gem::Version 
+        hash: 23
+        segments: 
+        - 1
+        - 0
+        - 0
+        version: 1.0.0
+  type: :development
+  version_requirements: *id004
+description: "S3 library provides access to Amazon's Simple Storage Service. It supports both: European and US buckets through REST API."
+email: 
+- qoobaa@gmail.com
+executables: []
+
+extensions: []
+
+extra_rdoc_files: []
+
+files: 
+- .gitignore
+- Gemfile
+- Gemfile.lock
+- LICENSE
+- README.rdoc
+- Rakefile
+- extra/s3_attachment_fu.rb
+- extra/s3_paperclip.rb
+- lib/s3.rb
+- lib/s3/bucket.rb
+- lib/s3/buckets_extension.rb
+- lib/s3/connection.rb
+- lib/s3/exceptions.rb
+- lib/s3/object.rb
+- lib/s3/objects_extension.rb
+- lib/s3/parser.rb
+- lib/s3/request.rb
+- lib/s3/service.rb
+- lib/s3/signature.rb
+- lib/s3/version.rb
+- s3.gemspec
+- test/bucket_test.rb
+- test/connection_test.rb
+- test/object_test.rb
+- test/service_test.rb
+- test/signature_test.rb
+- test/test_helper.rb
+has_rdoc: true
+homepage: http://jah.pl/projects/s3.html
+licenses: []
+
+post_install_message: 
+rdoc_options: []
+
+require_paths: 
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement 
+  none: false
+  requirements: 
+  - - ">="
+    - !ruby/object:Gem::Version 
+      hash: 3
+      segments: 
+      - 0
+      version: "0"
+required_rubygems_version: !ruby/object:Gem::Requirement 
+  none: false
+  requirements: 
+  - - ">="
+    - !ruby/object:Gem::Version 
+      hash: 23
+      segments: 
+      - 1
+      - 3
+      - 6
+      version: 1.3.6
+requirements: []
+
+rubyforge_project: s3
+rubygems_version: 1.3.7
+signing_key: 
+specification_version: 3
+summary: Library for accessing S3 objects and buckets
+test_files: []
+
