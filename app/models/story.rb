@@ -23,8 +23,9 @@ class Story < ActiveRecord::Base
       :storage => :s3,
       :s3_credentials => "#{RAILS_ROOT}/config/s3.yml",
       :path => ":attachment/:id/:style.:extension",
-      :bucket => "extraspecial"
-      
+      :bucket => "extraspecial",
+      :url => ":s3_domain_url"
+
   validates_presence_of :name
   validates_presence_of :title
   validates_presence_of :body

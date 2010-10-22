@@ -4,9 +4,11 @@ source "http://gems.github.com"
 gem "mysql"
 gem 'be_valid_asset'
 gem 'mime-types','1.16'
-gem "right_aws"
+# gem "right_aws"
 gem "aws-s3"
-gem "paperclip","2.2.7"
+gem "s3"
+gem "paperclip"
+# ,"2.2.7"
 
 group :test do
   gem "nokogiri"

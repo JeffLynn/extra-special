@@ -2,6 +2,18 @@ GEM
   remote: http://gemcutter.org/
   remote: http://gems.github.com/
   specs:
+    activemodel (3.0.1)
+      activesupport (= 3.0.1)
+      builder (~> 2.1.2)
+      i18n (~> 0.4.1)
+    activerecord (3.0.1)
+      activemodel (= 3.0.1)
+      activesupport (= 3.0.1)
+      arel (~> 1.0.0)
+      tzinfo (~> 0.3.23)
+    activesupport (3.0.1)
+    arel (1.0.1)
+      activesupport (~> 3.0.0)
     aws-s3 (0.6.2)
       builder
       mime-types
@@ -46,6 +58,7 @@ GEM
       term-ansicolor (~> 1.0.5)
       trollop (~> 1.16.2)
     highline (1.6.1)
+    i18n (0.4.1)
     json (1.4.6)
     json_pure (1.4.6)
     launchy (0.3.7)
@@ -61,33 +74,34 @@ GEM
     net-ssh-gateway (1.0.1)
       net-ssh (>= 1.99.1)
     nokogiri (1.4.3.1)
-    paperclip (2.2.7)
-      right_aws
+    paperclip (2.3.4)
+      activerecord
+      activesupport
     pickle (0.4.2)
       cucumber (>= 0.8)
       rake
       rspec (>= 1.3)
       yard
+    proxies (0.2.1)
     rack (1.1.0)
     rack-test (0.5.6)
       rack (>= 1.0)
     rake (0.8.7)
-    right_aws (2.0.0)
-      right_http_connection (>= 1.2.1)
-    right_http_connection (1.2.4)
-    rspec (2.0.0)
-      rspec-core (= 2.0.0)
-      rspec-expectations (= 2.0.0)
-      rspec-mocks (= 2.0.0)
-    rspec-core (2.0.0)
-    rspec-expectations (2.0.0)
+    rspec (2.0.1)
+      rspec-core (~> 2.0.1)
+      rspec-expectations (~> 2.0.1)
+      rspec-mocks (~> 2.0.1)
+    rspec-core (2.0.1)
+    rspec-expectations (2.0.1)
       diff-lcs (>= 1.1.2)
-    rspec-mocks (2.0.0)
-      rspec-core (= 2.0.0)
-      rspec-expectations (= 2.0.0)
+    rspec-mocks (2.0.1)
+      rspec-core (~> 2.0.1)
+      rspec-expectations (~> 2.0.1)
     rspec-rails (2.0.1)
       rspec (~> 2.0.0)
     rubyzip (0.9.4)
+    s3 (0.3.7)
+      proxies
     selenium-webdriver (0.0.29)
       childprocess (>= 0.0.7)
       ffi (~> 0.6.3)
@@ -95,6 +109,7 @@ GEM
       rubyzip
     term-ansicolor (1.0.5)
     trollop (1.16.2)
+    tzinfo (0.3.23)
     xml-simple (1.0.12)
     yard (0.6.1)
 
@@ -116,9 +131,9 @@ DEPENDENCIES
   mime-types (= 1.16)
   mysql
   nokogiri
-  paperclip (= 2.2.7)
+  paperclip
   pickle
   rack (= 1.1.0)
-  right_aws
   rspec
   rspec-rails
+  s3
