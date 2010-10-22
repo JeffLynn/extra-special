@@ -42,8 +42,8 @@ describe Story do
     end
 
     it "insists on a picture" do
-      @story.picture = nil
-      @story.should_not be_valid
+       story = Factory.build(:story, :picture => nil)
+       story.should_not be_valid
     end
   end
 end

@@ -29,6 +29,6 @@ class Story < ActiveRecord::Base
   validates_presence_of :name
   validates_presence_of :title
   validates_presence_of :body
-  # 519X233
+
   validates_attachment_presence :picture
 end
