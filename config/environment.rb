@@ -10,8 +10,7 @@ Rails::Initializer.run do |config|
 
   config.gem 'be_valid_asset',   :lib => false
   config.gem "paperclip"
-  config.gem "paperclip"
-  config.gem "s3"
+  config.gem "s3",   :lib => false
   
   if %w(development test cucumber).include?(RAILS_ENV)
     config.gem 'mime-types',       :lib => false, :version => '= 1.16'
