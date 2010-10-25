@@ -63,6 +63,7 @@ describe Application do
       application.no_additional_funding.should be_false
     end
 
+    
     it "will not allow any of the others to be selected if none is set" do
       application = Factory.build(:application,
         :registered_care_allowance => false,
@@ -71,6 +72,16 @@ describe Application do
         :no_additional_funding => true
       )
       application.should_not be_valid
+    end
+    
+    it "will allow any of the others to be selected if none is not set" do
+      application = Factory.build(:application,
+        :registered_care_allowance => false,
+        :supported_living_allowance => true,
+        :domiciliary_allowance => true,
+        :no_additional_funding => false
+      )
+      application.should be_valid
     end
   end
 end
