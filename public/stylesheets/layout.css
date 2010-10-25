@@ -309,7 +309,7 @@ p.link_reference a{
 }
 
 div.how_you_can_help, div.contact_us {
-  padding-bottom: 40px;
+  padding-bottom: 80px;
 }
 .how_you_can_help a {
   color: #C5776B;
@@ -317,7 +317,7 @@ div.how_you_can_help, div.contact_us {
 
 .contact_email {
 	padding-top:30px;
-	padding-bottom:40px;
+	
 }
 .contact_email a{
 	font-size:1.4em;
