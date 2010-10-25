@@ -82,7 +82,7 @@ div#cross_box {border-top:1px solid #cac9ce; width:160px; height: 10px; margin-l
 #footer li {
   display: block;
   float: left;
-  margin-right: 11px;
+  margin-right: 18px;
 }
 #footer li.first {
 
@@ -157,6 +157,7 @@ h1.about_us_title { background-image: url(/images/headers/about_us.gif); }
 h1.what_we_do_title { background-image: url(/images/headers/what_we_do.gif); }
 h1.how_you_can_help_title { background-image: url(/images/headers/how_you_can_help.gif); }
 h1.how_to_apply_title { background-image: url(/images/headers/how_to_apply.gif); }
+h1.favourites_title { background-image: url(/images/headers/favourites.gif); }
 h1.contact_us_title { background-image: url(/images/headers/contact_us.gif); }
 
 ol#story_list {
@@ -217,6 +218,11 @@ form div.checkboxes ul {
   padding-left: 5px;
   z-index: 100;
 }
+
+form div.checkboxes ul li.option{
+	margin-bottom:10px;
+}
+
 form div.checkboxes ul li input{
   position: absolute;
   left: 0;
@@ -267,6 +273,7 @@ div#notes p
   text-align: right;
   line-height: 1.8em;
   padding-top: 60px;
+  font-size: 1.4em;
 }
 
 p.link_reference {
@@ -308,6 +315,14 @@ div.how_you_can_help, div.contact_us {
   color: #C5776B;
 }
 
+.contact_email {
+	padding-top:30px;
+	padding-bottom:40px;
+}
+.contact_email a{
+	font-size:1.4em;
+	
+}
 .contact_us p, .how_you_can_help p {
   font-size: 1.4em;
   margin-top: 30px;

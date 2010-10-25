@@ -19,15 +19,15 @@
     <%= f.text_area(:contact_details_of_supporter) %>
   </p>
   <p>
-    <%= f.label(:what_applicant_is_applying_for,"What Applicant is Applying For #{mandatory_indicator()}") %>
+    <%= f.label(:what_applicant_is_applying_for,"What Applicant is applying for #{mandatory_indicator()}") %>
     <%= f.text_area(:what_applicant_is_applying_for) %>
   </p>
   <p>
-    <%= f.label(:relevant_information,"Any Relevant Information About<br/>Applicant and Application #{mandatory_indicator()}") %>
+    <%= f.label(:relevant_information,"Any relevant information about<br/>applicant and application #{mandatory_indicator()}") %>
     <%= f.text_area(:relevant_information) %>
   </p>
   <p>
-    <%= f.label(:details_of_cost,"Details of Cost<br />(Attach quotations or estimates) #{mandatory_indicator()}") %>
+    <%= f.label(:details_of_cost,"Details of Cost<br />(Attach quotation or estimate) #{mandatory_indicator()}") %>
     <%= f.text_area(:details_of_cost) %>
   </p>
   <p>
@@ -42,10 +42,10 @@
     <span class="label">If you are in receipt of any of the following funding<br/> please tick the appropriate box <%= mandatory_indicator() %></span>
     <div class="checkboxes">
       <ul>
-        <li><%= f.check_box(:registered_care_allowance) %> <%= f.label :registered_care_allowance, 'Registered care allowance' %></li>
-        <li><%= f.check_box(:supported_living_allowance) %> <%= f.label :supported_living_allowance, 'Supported living allowance' %></li>
-        <li><%= f.check_box(:domiciliary_allowance) %> <%= f.label :domiciliary_allowance, 'Domiciliary allowance' %></li>
-        <li><%= f.check_box(:no_additional_funding) %> <%= f.label :no_additional_funding, 'None' %></li>
+        <li class="option"><%= f.check_box(:registered_care_allowance) %> <%= f.label :registered_care_allowance, 'Registered care allowance' %></li>
+        <li class="option"><%= f.check_box(:supported_living_allowance) %> <%= f.label :supported_living_allowance, 'Supported living allowance' %></li>
+        <li class="option"><%= f.check_box(:domiciliary_allowance) %> <%= f.label :domiciliary_allowance, 'Domiciliary allowance' %></li>
+        <li class="option"><%= f.check_box(:no_additional_funding) %> <%= f.label :no_additional_funding, 'None' %></li>
       </ul>
     </div>
   </div>
@@ -75,13 +75,13 @@
     </p>
     <p class="address">
       The ExtraSpecial Trust<br />
-      29 Grange Court Road<br />
-      Henleaze<br />
+      5-6 Brook Business Park<br />
+      Folly Brook Road<br />
+	  Emerson's Green<br />
       Bristol BS9 4DR<br />
-      Tel: 0117 9621761
     </p>
     <p>Registered Charity: 1129928</p>
     <p>
-      ALL APPLICANTS INFORMATION WILL BE KEPT IN STRICT CONFIDENCE<br /> WITHIN THE EXTRASPECIAL TRUST
+      ALL APPLICANTS' INFORMATION WILL BE KEPT IN STRICT CONFIDENCE<br /> WITHIN THE EXTRASPECIAL TRUST
     </p>
   </div>

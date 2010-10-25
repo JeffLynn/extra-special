@@ -22,7 +22,7 @@
   </div>
 
   <div id="left_menu">
-    <%= render :partial => '/layouts/main_menu', :locals => {:nav_class => 'nav_bar'} %>
+    <%= render :partial => '/layouts/side_menu', :locals => {:nav_class => 'nav_bar'} %>
   </div>
     
   <div id="body_section">
@@ -30,7 +30,7 @@
   </div>  
 
   <div id="footer" class="clearfix">
-    <%= render :partial => '/layouts/main_menu', :locals => {:nav_class => 'nav_bar'} %>
+    <%= render :partial => '/layouts/footer_menu', :locals => {:nav_class => 'nav_bar'} %>
     <p class="footnote">website designed & built by <a href="http://www.unboxedconsulting.com">unboxed consulting</a><br />
       <% if params['action'] == 'index' %>
       Registered Charity: 1129928
