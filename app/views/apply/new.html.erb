@@ -1,4 +1,4 @@
-<img alt="Home" src="/images/how_to_apply.png" />
+<img alt="Home" src="/images/how_to_apply.jpg" />
 <h1 class="section_title how_to_apply_title">How to apply</h1>
 <% form_for(@application) do |f| %>
   <%= f.error_messages %>
@@ -31,7 +31,7 @@
     <%= f.text_area(:details_of_cost) %>
   </p>
   <p>
-    <%= f.label(:other_contributions,"Amount Which Other May Have Agreed to Contribute #{mandatory_indicator()}") %>
+    <%= f.label(:other_contributions,"Amount Which Other May Have Agreed to <br/>Contribute #{mandatory_indicator()}") %>
     <%= f.text_field(:other_contributions, :class => 'text') %>
   </p>
   <p>
@@ -60,7 +60,7 @@
   <div class="p_like">
     <span class="label">&nbsp;</span>
     <div>
-      <%= f.submit("submit", :class => 'submit') %>
+      <%= f.submit("Submit", :class => 'submit') %>
     </div>
   </div>
 <% end %>

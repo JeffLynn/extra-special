@@ -175,17 +175,16 @@ ol#story_list li {
 ol#story_list a
 {
   text-decoration:none;
-  font-family: Georgia, Times, serif;
 }
 
 ol#story_list li.active a
 {
   color: #F26A6A;
 }
-div#story .section_title { height: 41px; padding-top: 0px; font-family: garamond; font-weight: normal; font-size: 2.0em; font-style: italic; }
+div#story .section_title { height: 33px; margin-bottom: 11px; padding-top: 0px; font-family: garamond; font-weight: normal; font-size: 2.0em; font-style: italic; }
 div#story {
   margin: 0px 0 0px 180px;
-  padding: 20px;
+  padding: 20px 20px 80px;
   border-left: 1px solid #cac9ce;
 }
 div#story img {
@@ -242,13 +241,15 @@ input.submit
 {
     width: 100px;
     height: 34px;
-    background-color: #ef3c37;
+    background-color: #009345;
     color: white;
-    font-size:1.3em;
+    font-size:1.5em;
     border:none;
+    font-family: times new roman, serif;
+    cursor: pointer;
 }
 
-span.mandatory{color: #ef3c37;}
+span.mandatory{color: #009345;}
 
 .errorExplanation { margin: 20px 0px; }
 .errorExplanation p, 
@@ -257,9 +258,10 @@ span.mandatory{color: #ef3c37;}
 
 div#notes
 {
-    padding: 25px 0 12px;
+    padding: 25px 0 40px;
     border-top: 1px solid #cac9ce;
     margin-top: 85px;
+    
 }
 
 div#notes p
@@ -268,7 +270,6 @@ div#notes p
     line-height: 200%;
     font-size: 1.4em;
 }
-
 #footer p {
   text-align: right;
   line-height: 1.8em;
@@ -288,12 +289,12 @@ div.fovourites {
 
 .fovourites p{
   line-height: 20px;
-  margin-bottom: 10px; 
+  margin-bottom: 7px; 
 }
 
 .fovourites h4{
   text-transform: uppercase;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
   font-size: 1.4em;
   font-weight: normal;
   line-height: 20px;
