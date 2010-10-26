@@ -1,6 +1,6 @@
 set :rails_env, "production"
 
-set :rails_server, "stage.unboxedconsulting.com"
+set :rails_server, "cumulus.unboxedconsulting.com"
 
 role :app, rails_server
 role :web, rails_server

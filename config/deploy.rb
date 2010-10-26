@@ -2,7 +2,7 @@ set :stages, %w(staging production)
 set :default_stage, "staging"
 
 set :application, "extra_special_trust"
-set :user, "extraspe"
+set :user, "extra_special_trust"
 
 set :deploy_to,   "/home/#{user}/#{application}"
 
