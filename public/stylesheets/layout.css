@@ -266,7 +266,7 @@ div#notes p
 {
     padding: 15px 0;
     line-height: 200%;
-    font-size: 1.2em;
+    font-size: 1.4em;
 }
 
 #footer p {
@@ -317,12 +317,9 @@ div.how_you_can_help, div.contact_us {
 
 .contact_email {
 	padding-top:30px;
-	
+	font-size: 1.4em;
 }
-.contact_email a{
-	font-size:1.4em;
-	
-}
+
 .contact_us p, .how_you_can_help p {
   font-size: 1.4em;
   margin-top: 30px;
