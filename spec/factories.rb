@@ -41,6 +41,7 @@ Factory.define :application do |a|
   a.registered_care_allowance                 false
   a.supported_living_allowance                true
   a.domiciliary_allowance                     false
+  a.no_additional_funding                     "0"
   a.accepted_terms_and_conditions             {Time.now}
 end
 

@@ -40,11 +40,20 @@ class Application < ActiveRecord::Base
 
   attr_accessor :no_additional_funding
 
-  def validate
+  before_validation :normalize_params
+  before_save :validate
+
+  def normalize_params
+    if self.no_additional_funding != true
+      self.no_additional_funding = (self.no_additional_funding == "1" ) ? true : false
+    end
+    true
+  end
+  
+  def validate    
     unless no_additional_funding || registered_care_allowance || supported_living_allowance || domiciliary_allowance
       errors.add_to_base("Need to provide one of 'Registered Care allowance', 'Supported living allowance', 'Domiciliary allowance' or 'None'")
     else
-
       if no_additional_funding && (registered_care_allowance || supported_living_allowance || domiciliary_allowance)
         errors.add_to_base("Cannot be 'None' if any of 'Registered Care allowance', 'Supported living allowance', 'Domiciliary allowance' are selected.")
       end

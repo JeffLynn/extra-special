@@ -4,8 +4,9 @@ class ApplyController < ApplicationController
   end
 
   def create
+ 
     @application = Application.new(params[:application])
-
+    
     respond_to do |format|
       if @application.save
         flash[:notice] = 'Your Application has been submitted.'
