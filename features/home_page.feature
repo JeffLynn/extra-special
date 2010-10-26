@@ -46,7 +46,7 @@ Feature: Homepage
 
   Scenario: viewing the how to apply page
     When I go to the how to apply page
-    Then I should see the image "/images/how_to_apply.png"
+    Then I should see the image "/images/how_to_apply.jpg"
 
   Scenario: viewing the contact us page
     When I go to the contact us
