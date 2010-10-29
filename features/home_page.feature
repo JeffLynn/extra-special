@@ -53,13 +53,13 @@ Feature: Homepage
     Then I should see the image "/images/contact_us.png"
 
   Scenario: viewing the favourites page
-    Given a link "link_to_page1" exists with ref: "http://www.example1.com", text: "example1.com", description: "example text1"
-      And a link "link_to_page2" exists with ref: "http://www.example2.com", text: "example2.com", description: "example text2"
+    Given a link "link_to_page1" exists with ref: "http://www.example1.com", text: "Example1", description: "example text1"
+      And a link "link_to_page2" exists with ref: "http://www.example2.com", text: "Example2", description: "example text2"
     When I go to the favourites page
     Then I should see the image "/images/favourites.png"
-      And I should see "example1.com"
-      And I should see "example2.com"
+      And I should see "Example1"
+      And I should see "Example2"
       And I should see "example text1"
       And I should see "example text2"
-      And I should see a link called "example1.com" linking to example page "1"
-      And I should see a link called "example2.com" linking to example page "2"
+      And I should see a link called "www.example1.com" linking to example page "1"
+      And I should see a link called "www.example2.com" linking to example page "2"

@@ -21,6 +21,7 @@ group :test do
   gem 'capybara'
   gem "pickle"
   gem "launchy"
+  gem "ruby-debug"
 end
 
 group :development do
