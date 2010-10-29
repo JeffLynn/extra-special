@@ -1,6 +1,5 @@
 source "http://rubygems.org"
 
-
 gem "mysql"
 gem 'be_valid_asset'
 gem 'mime-types','1.16'
