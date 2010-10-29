@@ -18,7 +18,7 @@ group :test do
   gem 'gherkin','2.2.4'
   gem 'cucumber'
   gem 'cucumber-rails'
-  gem 'capybara'å
+  gem 'capybara'
   gem "pickle"
   gem "launchy"
 end
