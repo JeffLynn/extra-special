@@ -1,4 +1,4 @@
-  # Be sure to restart your server when you modify this file
+# Be sure to restart your server when you modify this file
 
 # Specifies gem version of Rails to use when vendor/rails is not present
 RAILS_GEM_VERSION = '2.3.8' unless defined? RAILS_GEM_VERSION
@@ -12,11 +12,10 @@ Rails::Initializer.run do |config|
   config.gem "paperclip"
   config.gem "s3",   :lib => false
   config.gem "proxies",   :lib => false
-  config.gem 'rack',             :lib => false
-
+  
   if %w(development test cucumber).include?(RAILS_ENV)
     config.gem 'mime-types',       :lib => false, :version => '= 1.16'
-
+    config.gem 'rack',             :lib => false, :version => '1.1.0'
     config.gem 'database_cleaner', :lib => false, :version => '>=0.5.0' unless File.directory?(File.join(Rails.root, 'vendor/plugins/database_cleaner'))
     config.gem 'rspec',            :lib => false, :version => '>=1.3.0'
     config.gem 'rspec-rails',      :lib => false, :version => '>=1.3.2'
