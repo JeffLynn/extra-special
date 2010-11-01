@@ -31,7 +31,7 @@ class HomeController < ApplicationController
     @favourite_links_odd = []
     @favourite_links_even = []
     key = 1
-    Link.find(:all).each do |link|
+    Link.find(:all, :order => "id ASC").each do |link|
       if key.odd?
         @favourite_links_odd << link 
       else
