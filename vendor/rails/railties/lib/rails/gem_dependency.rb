@@ -1,4 +1,5 @@
 require 'rails/vendor_gem_source_index'
+require 'rails/gem_dependency' # Added by Jeff due to warning about deprecated gem.source_index
 
 module Gem
   def self.source_index=(index)
@@ -18,7 +19,8 @@ module Rails
 
     def self.add_frozen_gem_path
       @@paths_loaded ||= begin
-        source_index = Rails::VendorGemSourceIndex.new(Gem.source_index)
+ #       source_index = Rails::VendorGemSourceIndex.new(Gem.source_index) - changed by Jeff due to depracted file
+        source_index = Rails::VendorGemSourceIndex.new(Specification)
         Gem.clear_paths
         Gem.source_index = source_index
         # loaded before us - we can't change them, so mark them
