@@ -11,8 +11,8 @@ group :test do
   gem "nokogiri"
   gem 'rack','1.1.0'
   gem 'database_cleaner'
-  gem 'rspec'
-  gem 'rspec-rails'
+  gem 'rspec', '~> 1.3.0'
+  gem 'rspec-rails', '~> 1.3.0'
   gem 'factory_girl'
   gem 'gherkin','2.2.4'
   gem 'cucumber'
