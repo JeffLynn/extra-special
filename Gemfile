@@ -1,6 +1,8 @@
 source "http://rubygems.org"
+ruby "1.8.7"
 
-gem "mysql"
+gem "pg"
+gem 'unicorn'
 gem 'be_valid_asset'
 gem 'mime-types','1.16'
 gem "s3"
