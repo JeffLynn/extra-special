@@ -1,26 +1,28 @@
 source "http://rubygems.org"
 ruby "1.8.7"
-
+gem 'rake', '0.8.7'
+gem 'mysql'
 gem "pg"
+gem 'rails', '2.3.18'
 gem 'unicorn'
-gem 'be_valid_asset'
+gem 'proxies', '0.2.1'
+gem 'be_valid_asset', '1.1.1'
 gem 'mime-types','1.16'
-gem "s3"
-gem "paperclip"
+gem "s3", '0.3.7'
+gem "paperclip", '2.3.4'
 
 
 group :test do
   gem "nokogiri"
-  gem 'rack','1.1.0'
-  gem 'database_cleaner'
-  gem 'rspec', '~> 1.3.0'
-  gem 'rspec-rails', '~> 1.3.0'
-  gem 'factory_girl'
+  gem 'database_cleaner', '0.5.2'
+  gem 'rspec', '1.3.0'
+  gem 'rspec-rails', '1.3.2'
+  gem 'factory_girl', '1.2.3'
   gem 'gherkin','2.2.4'
-  gem 'cucumber'
-  gem 'cucumber-rails'
-  gem 'capybara'
-  gem "pickle"
+  gem 'cucumber', '0.9.0'
+  gem 'cucumber-rails', '0.3.2'
+  gem 'capybara', '0.3.9'
+  gem "pickle", '0.4.2'
   gem "launchy"
   # gem "ruby-debug"
 end
