@@ -1,7 +1,7 @@
 <ol id="story_list">
   <% @stories.each do |story| %>
     <li <%= @story && story.id == @story.id ? "class=\"active\"" : "" %> >
-      <%= link_to(h(story.name), story_path(story.id)) %>
+      <%= link_to(story.name, story_path(story.id)) %>
     </li>
   <% end %>
 </ol>
@@ -10,7 +10,7 @@
     <%= image_tag(@story.picture.url(:banner)) if @story %>
   </div>
   <div id="text">
-    <h1 class="section_title story_title"><%= h(@story.title) if @story %></h1>
+    <h1 class="section_title story_title"><%= @story.title if @story %></h1>
     <%= simple_format(@story.body) if @story %>
   </div>
 </div>
