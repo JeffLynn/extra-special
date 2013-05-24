@@ -1,10 +1,8 @@
 source "http://rubygems.org"
-ruby "1.8.7"
 gem 'rake', '0.8.7'
 gem 'mysql'
 gem "pg"
 gem 'rails', '2.3.18'
-gem 'unicorn'
 gem 'proxies', '0.2.1'
 gem 'be_valid_asset', '1.1.1'
 gem 'mime-types','1.16'
