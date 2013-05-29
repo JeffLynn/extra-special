@@ -14,6 +14,7 @@ group :test do
   gem "nokogiri"
   gem 'database_cleaner', '0.5.2'
   gem 'rspec', '1.3.0'
+  gem 'ruby-prof'
   gem 'rspec-rails', '1.3.2'
   gem 'factory_girl', '1.2.3'
   gem 'gherkin','2.2.4'
@@ -23,6 +24,7 @@ group :test do
   gem "pickle", '0.4.2'
   gem "launchy"
   # gem "ruby-debug"
+  gem 'test-unit', '1.2.3'
 end
 
 group :development do
