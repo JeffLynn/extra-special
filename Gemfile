@@ -7,6 +7,7 @@ gem 'rake'
 #gem 'mysql'
 gem "pg"
 gem 'rails', '3.2.13'
+gem 'ruby', '1.9.3'
 gem 'proxies', '0.2.1'
 gem 'be_valid_asset', '1.1.1'
 gem 'mime-types','1.16'
@@ -14,7 +15,6 @@ gem "s3", "~> 0.3.12" #JL 2013.07.04 Upgraded
 gem "paperclip", "~> 3.3.1" #JL 2013.07.04 Upgraded
 gem "rdoc"
 gem "jquery-rails"
-gem "uglifier""
 
 
 group :test do
