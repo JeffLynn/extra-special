@@ -14,6 +14,7 @@ gem "s3", "~> 0.3.12" #JL 2013.07.04 Upgraded
 gem "paperclip", "~> 3.3.1" #JL 2013.07.04 Upgraded
 gem "rdoc"
 gem "jquery-rails"
+gem "uglifier""
 
 
 group :test do
