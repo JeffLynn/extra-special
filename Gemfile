@@ -3,11 +3,11 @@
 #JL 2013.07.24 Added gem jquery-rails (Error that jquery not found when I enabled the asset pipeline - I figured I might need it in the future)
 
 source "http://rubygems.org"
+ruby "1.9.3"
 gem 'rake'
 #gem 'mysql'
 gem "pg"
 gem 'rails', '3.2.13'
-gem 'ruby', '1.9.3'
 gem 'proxies', '0.2.1'
 gem 'be_valid_asset', '1.1.1'
 gem 'mime-types','1.16'
