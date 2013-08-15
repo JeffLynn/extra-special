@@ -1,7 +1,7 @@
 #JL 2013.06.27 Added in rdoc
 #JL 2013.07.03 Using Rake 0.9.6 (last version before v10); commented out "mysql"
 #JL 2013.07.24 Added gem jquery-rails (Error that jquery not found when I enabled the asset pipeline - I figured I might need it in the future)
-
+#JL 2013.08.15 Added :assets group (got error that uglifier was not available when pushing to Heroku)
 source "http://rubygems.org"
 ruby "1.9.3"
 gem 'rake'
@@ -16,6 +16,12 @@ gem "paperclip", "~> 3.3.1" #JL 2013.07.04 Upgraded
 gem "rdoc"
 gem "jquery-rails"
 
+group :assets do
+  gem 'therubyracer'
+  gem 'sass-rails', '>=3.2.4'
+  gem 'coffee-rails', '>=3.2.2'
+  gem 'uglifier', '>=1.2.3'
+end
 
 group :test do
   gem "nokogiri", "~> 1.5.6" #JL 2013.07.04 Set the version - was getting warning about build version
