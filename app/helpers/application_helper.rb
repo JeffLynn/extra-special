@@ -1,7 +1,7 @@
 # Methods added to this helper will be available to all templates in the application.
 module ApplicationHelper
   def mandatory_indicator
-    "<span class=\"mandatory\">*</span>"
+    "<span class=\"mandatory\">*</span>".html_safe
   end
 
   def actual_page?(page_name)
@@ -10,3 +10,4 @@ module ApplicationHelper
     'inactive'
   end
 end
+

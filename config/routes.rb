@@ -1,65 +1,30 @@
-ActionController::Routing::Routes.draw do |map|
+# JL 2013.07.03 Rewritten for Rails 3 syntax (and commented out default action on "stories" and moved "resources :applications" up - was mapping to "stories"?!)
 
-  map.namespace :admin do |admin|
-    admin.resources :stories
-    admin.default '', :controller => 'stories', :action => 'index'
-    admin.resources :applications, :only => [:index, :show, :destroy]
-    admin.resources :links
-  end
-
-  map.with_options :controller => 'home' do |home|
-    home.root             # index    
-    home.contact_us       'contact_us',          :action => 'contact_us'
-    home.about_us         'about_us', :action => 'about_us'
-    home.what_we_do       'what_we_do', :action => 'what_we_do'
-    home.stories          'stories', :action => 'stories'
-    home.story            'stories/:story_id', :action => 'stories'
-    home.how_you_can_help 'how_you_can_help', :action => 'how_you_can_help'
-    home.how_to_apply     'how_to_apply', :action => 'how_to_apply'
-    home.favourites       'favourites', :action => 'favourites'
-  end
-
-  map.resources :applications, :controller => :apply, :only => [:new, :create]
+ExtraSpecial::Application.routes.draw do
   
-  # The priority is based upon order of creation: first created -> highest priority.
+ resources :applications, controller: "apply", only: [:new, :create]
+ 
+ namespace :admin do
+    resources :stories
+    #default '', controller: 'stories', action: 'index'
+    resources :applications, only: [:index, :show, :destroy]
+    resources :links
+ end
 
-  # Sample of regular route:
-  #   map.connect 'products/:id', :controller => 'catalog', :action => 'view'
-  # Keep in mind you can assign values other than :controller and :action
-
-  # Sample of named route:
-  #   map.purchase 'products/:id/purchase', :controller => 'catalog', :action => 'purchase'
-  # This route can be invoked with purchase_url(:id => product.id)
-
-  # Sample resource route (maps HTTP verbs to controller actions automatically):
-  #   map.resources :products
-
-  # Sample resource route with options:
-  #   map.resources :products, :member => { :short => :get, :toggle => :post }, :collection => { :sold => :get }
-
-  # Sample resource route with sub-resources:
-  #   map.resources :products, :has_many => [ :comments, :sales ], :has_one => :seller
+  root :to            => "home#index"
+    
+  match "/contact_us"         =>   "home#contact_us", :as => :contact_us
+  match "/about_us"           =>   "home#about_us", :as => :about_us
+  match "/what_we_do"         =>   "home#what_we_do", :as => :what_we_do
+  match "/stories"            =>   "home#stories", :as => :stories
+  match "/how_you_can_help"   =>   "home#how_you_can_help", :as => :how_you_can_help
+  match "/how_to_apply"       =>   "home#how_to_apply", :as => :how_to_apply
+  match "/favourites"         =>   "home#favourites", :as => :favourites
+  match "/:story_id"          =>   "home#stories", :as => :story
   
-  # Sample resource route with more complex sub-resources
-  #   map.resources :products do |products|
-  #     products.resources :comments
-  #     products.resources :sales, :collection => { :recent => :get }
-  #   end
 
-  # Sample resource route within a namespace:
-  #   map.namespace :admin do |admin|
-  #     # Directs /admin/products/* to Admin::ProductsController (app/controllers/admin/products_controller.rb)
-  #     admin.resources :products
-  #   end
-
-  # You can have the root of your site routed with map.root -- just remember to delete public/index.html.
-  # map.root :controller => "welcome"
-
-  # See how all your routes lay out with "rake routes"
-
-  # Install the default routes as the lowest priority.
-  # Note: These default routes make all actions in every controller accessible via GET requests. You should
-  # consider removing or commenting them out if you're using named routes and resources.
-  map.connect ':controller/:action/:id'
-  map.connect ':controller/:action/:id.:format'
-end
+  
+  
+  match ':controller/:action/:id'
+  match ':controller/:action/:id.:format'
+ end

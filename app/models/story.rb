@@ -21,7 +21,7 @@ class Story < ActiveRecord::Base
         :thumbnail => '111x50#'
       },
       :storage => :s3,
-      :s3_credentials => "#{RAILS_ROOT}/config/s3.yml",
+      :s3_credentials => "#{Rails.root}/config/s3.yml",
       :path => ":attachment/:id/:style.:extension",
       :bucket => "extraspecial",
       :url => ":s3_domain_url"

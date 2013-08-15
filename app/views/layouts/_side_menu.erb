@@ -1,3 +1,4 @@
+<!-- JL 2013.07.25 - The "actual_page?" tells layout.cdd to pick up the colour for the "we are on this page" menu item -->
 <ul class="<%= nav_class %>">
   <li class="first <%= actual_page?('index') %>"><%= link_to 'home', root_path %></li>
   <li class="<%= actual_page?('about_us') %>"><%= link_to 'about us', about_us_path %></li>

@@ -62,6 +62,7 @@ module AuthenticatedSystem
   # to access the requested action.  For example, a popup window might
   # simply close itself.
   def access_denied
+    puts "here >#{AUTHENTICATION_REALM}<"
     request_http_basic_authentication(AUTHENTICATION_REALM)
   end
 

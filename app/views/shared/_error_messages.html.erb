@@ -1,0 +1,14 @@
+<%# JL - 2013.08.15 - form_for.error_messages was deprecated in Rails 3.  Replaced with this "partial" as per Ruby on Rails Tutorial P309%>
+<% if @application.errors.any? %>
+  <div id="errorExplanation">
+    <div class="errorExplanation">
+		<h2><%= pluralize(@application.errors.count, "error") %> prohibited this application from being saved.</h2>
+		<p>There were problems with the following fields:</p>
+    </div>
+    <ul>
+    <% @application.errors.full_messages.each do |msg| %>
+      <li>* <%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>

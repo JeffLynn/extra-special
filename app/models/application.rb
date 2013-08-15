@@ -20,7 +20,26 @@
 #  updated_at                                :datetime
 #
 
+# Jl 2013.08.14 -  made the attributes accessible (was getting "Can't mass-assign protected attributes")
+
 class Application < ActiveRecord::Base
+  attr_accessible :name_of_applicant
+  attr_accessible :name_of_applicant
+  attr_accessible :address_of_applicant
+  attr_accessible :name_of_applicants_supporter
+  attr_accessible :contact_details_of_supporter
+  attr_accessible :what_applicant_is_applying_for
+  attr_accessible :relevant_information
+  attr_accessible :details_of_cost
+  attr_accessible :other_contributions
+  attr_accessible :amount_requested_from_extra_special_trust
+  attr_accessible :accepted_terms_and_conditions
+  attr_accessible :registered_care_allowance
+  attr_accessible :supported_living_allowance
+  attr_accessible :domiciliary_allowance
+  attr_accessible :no_additional_funding
+  attr_accessible :accept_terms_and_conditions
+  
   validates_presence_of :name_of_applicant
   validates_presence_of :address_of_applicant
   validates_presence_of :name_of_applicants_supporter

@@ -1,0 +1,15 @@
+.DS_Store
+*~
+*.swp
+*.log
+/log/*
+/db/local_seed.rb
+/config/database.yml
+/config/database.yml.example
+/coverage
+/tmp/*
+/public/cucumber/
+nbproject
+public/system
+rerun.txt
+webrat-*.html
