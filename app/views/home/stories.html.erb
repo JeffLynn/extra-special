@@ -1,6 +1,7 @@
+<%# JL 2013.08. - updated for Rails 3 - escaping of strings has changed %>
 <ol id="story_list">
   <% @stories.each do |story| %>
-    <li <%= @story && story.id == @story.id ? "class=\"active\"" : "" %> >
+    <li <%= @story && story.id == @story.id ? 'class=active' : '' %> >
       <%= link_to(story.name, story_path(story.id)) %>
     </li>
   <% end %>

@@ -2,13 +2,13 @@
 <% if @application.errors.any? %>
   <div id="errorExplanation">
     <div class="errorExplanation">
-		<h2><%= pluralize(@application.errors.count, "error") %> prohibited this application from being saved.</h2>
-		<p>There were problems with the following fields:</p>
-    </div>
+		<p><%= pluralize(@application.errors.count, "error") %> prohibited this application from being saved.
+		<br/>There were problems with the following fields:</p>
     <ul>
     <% @application.errors.full_messages.each do |msg| %>
       <li>* <%= msg %></li>
     <% end %>
     </ul>
+    </div>
   </div>
 <% end %>

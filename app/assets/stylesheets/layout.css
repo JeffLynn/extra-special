@@ -267,9 +267,10 @@ input.submit
 span.mandatory{color: #009345;}
 
 .errorExplanation { margin: 20px 0px; }
-.errorExplanation p, 
-.errorExplanation li { font-size: 1.5em; }
+.errorExplanation li { font-size: 1.5em;font-weight: normal;}
 .errorExplanation li { margin-left: 13px; }
+.errorExplanation p {font-size: 1.5em;font-weight: bold;} 
+
 
 div#notes
 {
@@ -315,6 +316,7 @@ div.fovourites {
   font-size: 1.4em;
   font-weight: normal;
   line-height: 20px;
+  font-family: times;
 }
 p.link_reference { 
   margin-bottom: 35px;
